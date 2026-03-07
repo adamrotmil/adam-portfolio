@@ -6,7 +6,7 @@ export interface ProjectSection {
   body?: string[];
   quote?: string;
   stats?: { number: number; suffix: string; label: string }[];
-  images?: { label: string; dark?: boolean; height?: number }[];
+  images?: { label: string; dark?: boolean; height?: number; src?: string }[];
   imagePosition?: "left" | "right";
 }
 
@@ -18,6 +18,8 @@ export interface Project {
   tags: string[];
   color: string;
   featured?: boolean;
+  thumbnail?: string;
+  heroImage?: string;
   meta: { label: string; value: string }[];
   sections: ProjectSection[];
   outcome: {
@@ -40,6 +42,8 @@ export const PROJECTS: Project[] = [
     tags: ["AI / Agents", "SaaS", "Video Editor", "Campaign Management"],
     color: "#6366f1",
     featured: true,
+    thumbnail: "/images/clarvos/Homepage-AI-Optimized-Agentic.png",
+    heroImage: "/images/clarvos/Homepage-AI-Optimized-Agentic.png",
     meta: [
       { label: "Client", value: "Clarvos (Cylitix)" },
       { label: "Role", value: "Lead Product Designer" },
@@ -111,9 +115,10 @@ export const PROJECTS: Project[] = [
             label: "Creative Gallery — AI-Generated Brand Assets",
             dark: true,
             height: 520,
+            src: "/images/clarvos/Creatives-Library.png",
           },
-          { label: "Asset Detail — Metadata & AI Insights", height: 360 },
-          { label: "Trend Discovery — Topic Analysis", height: 360 },
+          { label: "Asset Detail — Metadata & AI Insights", height: 360, src: "/images/clarvos/Hybrid Score + Insights.png" },
+          { label: "Trend Discovery — Topic Analysis", height: 360, src: "/images/clarvos/tiktok-trends.png" },
         ],
       },
       {
@@ -127,7 +132,7 @@ export const PROJECTS: Project[] = [
         ],
         imagePosition: "left",
         images: [
-          { label: "Campaign Wizard — Step-by-Step Flow", height: 480 },
+          { label: "Campaign Wizard — Step-by-Step Flow", height: 480, src: "/images/clarvos/Clarvos-Campaign-Plan.png" },
         ],
       },
       {
@@ -147,10 +152,11 @@ export const PROJECTS: Project[] = [
             label: "Video Editor — Scene Timeline with Prompt Controls",
             dark: true,
             height: 540,
+            src: "/images/clarvos/Canvas-Studio-Editor.png",
           },
-          { label: "Scene Prompts", height: 280 },
-          { label: "Start & End Frames", height: 280 },
-          { label: "Audio & Vocal Tracks", height: 280 },
+          { label: "Scene Prompts", height: 280, src: "/images/clarvos/AI Edit Image.png" },
+          { label: "Start & End Frames", height: 280, src: "/images/clarvos/Meta-Manual-Campaign-Editor.png" },
+          { label: "Audio & Vocal Tracks", height: 280, src: "/images/clarvos/Review-Approve-Placements.png" },
         ],
       },
       {
@@ -180,9 +186,10 @@ export const PROJECTS: Project[] = [
             label:
               "Design System — Components, Patterns, AI-Specific Elements",
             height: 420,
+            src: "/images/clarvos/Performance-Dashboard.png",
           },
-          { label: "Component Library — Figma", height: 300 },
-          { label: "Interaction Patterns — Agent States", height: 300 },
+          { label: "Component Library — Figma", height: 300, src: "/images/clarvos/Homepage-Trends@2x.png" },
+          { label: "Interaction Patterns — Agent States", height: 300, src: "/images/clarvos/Clarvos-Campaign-Plan.png" },
         ],
       },
     ],
@@ -222,6 +229,8 @@ export const PROJECTS: Project[] = [
       "A mobile-native diagnostic tool for HVAC technicians. QR scanning identifies equipment, then an LLM guides step-by-step repairs with product-aware responses.",
     tags: ["Mobile", "Conversational AI", "QR/Vision", "Field Service"],
     color: "#2d5a3d",
+    thumbnail: "/images/gator/Gator-Splash.png",
+    heroImage: "/images/gator/Gator-Splash.png",
     meta: [
       { label: "Client", value: "Gator Tech Support" },
       { label: "Role", value: "UI Designer" },
@@ -278,10 +287,12 @@ export const PROJECTS: Project[] = [
             label: "QR Scanner — Camera View with Overlay",
             dark: true,
             height: 440,
+            src: "/images/gator/QR-scan.png",
           },
           {
             label: "Product Identified — Model Card with Specs",
             height: 440,
+            src: "/images/gator/Diagnose.png",
           },
         ],
       },
@@ -355,6 +366,8 @@ export const PROJECTS: Project[] = [
       "Integrating an LLM into a dispatch platform to pre-draft carrier responses. Human-in-the-loop design keeps operators in control while cutting response time dramatically.",
     tags: ["AI / LLM", "Enterprise", "Human-in-the-Loop"],
     color: "#7c3aed",
+    thumbnail: "/images/respond-ai/respond-home.png",
+    heroImage: "/images/respond-ai/respond-home.png",
     meta: [
       { label: "Client", value: "McLeod Software" },
       { label: "Role", value: "Lead Product Designer" },
@@ -406,11 +419,13 @@ export const PROJECTS: Project[] = [
             label: "Respond AI — Dashboard & Messaging Interface",
             dark: true,
             height: 480,
+            src: "/images/respond-ai/respond-messaging-2x.png",
           },
-          { label: "Email View — LLM Pre-drafted Responses", height: 360 },
+          { label: "Email View — LLM Pre-drafted Responses", height: 360, src: "/images/respond-ai/respond-home.png" },
           {
             label: "Driver Follow-up — Contextual AI Suggestions",
             height: 360,
+            src: "/images/respond-ai/driver-followup-2.png",
           },
         ],
       },
@@ -468,6 +483,8 @@ export const PROJECTS: Project[] = [
       "Leading design for a clinical research platform used in oncology R&D. Apps and tools for running trials, engaging patients and doctors, and managing health data.",
     tags: ["Health Tech", "Clinical Trials", "Design Leadership"],
     color: "#0ea5e9",
+    thumbnail: "/images/astrazeneca/CARE-patient-reported-outcomes.png",
+    heroImage: "/images/astrazeneca/CARE-patient-reported-outcomes.png",
     meta: [
       { label: "Client", value: "AstraZeneca" },
       { label: "Role", value: "Product Discovery & Design Lead" },
@@ -514,9 +531,10 @@ export const PROJECTS: Project[] = [
             label: "Patient Check-in — Voice Symptom Tracking",
             dark: true,
             height: 480,
+            src: "/images/astrazeneca/CARE-patient-reported-outcomes.png",
           },
-          { label: "Doctor Dashboard — Patient Monitoring", height: 360 },
-          { label: "Guided Check-in Flow", height: 360 },
+          { label: "Doctor Dashboard — Patient Monitoring", height: 360, src: "/images/astrazeneca/Concepts-Testing.png" },
+          { label: "Guided Check-in Flow", height: 360, src: "/images/astrazeneca/Variations.png" },
         ],
       },
       {
@@ -564,6 +582,8 @@ export const PROJECTS: Project[] = [
       "Designing research tools at the intersection of clinical practice and patient engagement for one of the country's leading academic medical centers.",
     tags: ["Health Tech", "Research", "Mobile"],
     color: "#f97316",
+    thumbnail: "/images/miami/University-Miami-cover.png",
+    heroImage: "/images/miami/University-Miami-cover.png",
     meta: [
       { label: "Client", value: "University of Miami" },
       { label: "Role", value: "Lead Product Designer" },
@@ -611,9 +631,10 @@ export const PROJECTS: Project[] = [
             label: "MyWellness — Patient Mobile App",
             dark: true,
             height: 480,
+            src: "/images/miami/my-wellness-dashboard.png",
           },
-          { label: "Doctor Dashboard — Symptom Trends", height: 360 },
-          { label: "Real-time Coaching Interface", height: 360 },
+          { label: "Doctor Dashboard — Symptom Trends", height: 360, src: "/images/miami/Patient-coaching.png" },
+          { label: "Real-time Coaching Interface", height: 360, src: "/images/miami/Messaging.png" },
         ],
       },
       {
@@ -681,6 +702,8 @@ export const PROJECTS: Project[] = [
       "Designing a modular content authoring environment for cybersecurity educators to create competency-based assessments and hands-on training labs.",
     tags: ["Defense", "Enterprise", "Canvas UI", "Design Systems"],
     color: "#06b6d4",
+    thumbnail: "/images/content-studio/content-studio-cyber-training.png",
+    heroImage: "/images/content-studio/content-studio-cyber-training.png",
     meta: [
       { label: "Client", value: "Ultimate Knowledge Inst. / CYBERCOM" },
       { label: "Role", value: "Lead Product Designer" },
@@ -717,9 +740,10 @@ export const PROJECTS: Project[] = [
             label: "Content Studio — Network Topology Canvas",
             dark: true,
             height: 520,
+            src: "/images/content-studio/cyber-training-canvas-designer.png",
           },
-          { label: "Container Palette — VM Configuration", height: 360 },
-          { label: "Properties Panel — System Resources", height: 360 },
+          { label: "Container Palette — VM Configuration", height: 360, src: "/images/content-studio/design-system-components.png" },
+          { label: "Properties Panel — System Resources", height: 360, src: "/images/content-studio/design-system-components-slots.png" },
         ],
       },
       {
@@ -765,6 +789,8 @@ export const PROJECTS: Project[] = [
       "Creating a self-service platform that empowered retail investors to manage their 401(k) accounts with guidance, reducing support calls by 40%.",
     tags: ["Finance", "Enterprise", "Design Leadership"],
     color: "#0891b2",
+    thumbnail: "/images/trowe-price/Landing-page-401k-overview.jpg",
+    heroImage: "/images/trowe-price/Landing-page-401k-overview.jpg",
     meta: [
       { label: "Client", value: "T. Rowe Price" },
       { label: "Role", value: "Senior Manager, UX Design Lead" },
@@ -832,9 +858,10 @@ export const PROJECTS: Project[] = [
             label: "401(k) Dashboard — Account Overview",
             dark: true,
             height: 480,
+            src: "/images/trowe-price/Landing-page-401k-overview.jpg",
           },
-          { label: "Distribution Flow — Step by Step", height: 360 },
-          { label: "Financial Wellness — Goal Tracking", height: 360 },
+          { label: "Distribution Flow — Step by Step", height: 360, src: "/images/trowe-price/Workshop-UXR.jpg" },
+          { label: "Financial Wellness — Goal Tracking", height: 360, src: "/images/trowe-price/03-Testing-UXR.png" },
         ],
       },
       {

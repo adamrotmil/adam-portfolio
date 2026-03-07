@@ -32,7 +32,7 @@ function CaseStudyCard({
             : "0 2px 12px rgba(0,0,0,0.1)",
         }}
       >
-        {/* Image placeholder */}
+        {/* Project thumbnail */}
         <div
           className="w-full flex items-center justify-center relative overflow-hidden"
           style={{
@@ -40,16 +40,29 @@ function CaseStudyCard({
             background: `linear-gradient(135deg, ${study.color}15, ${study.color}08)`,
           }}
         >
-          <div
-            className="absolute inset-0 transition-opacity duration-400"
-            style={{
-              background: `linear-gradient(135deg, ${study.color}0a, ${study.color}20)`,
-              opacity: hovered ? 1 : 0.5,
-            }}
-          />
-          <span className="font-sans text-[0.8rem] text-text-muted/30 tracking-[0.05em] uppercase z-10">
-            Project Image
-          </span>
+          {study.thumbnail ? (
+            <img
+              src={study.thumbnail}
+              alt={`${study.title} — ${study.subtitle}`}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500"
+              style={{
+                transform: hovered ? "scale(1.03)" : "scale(1)",
+              }}
+            />
+          ) : (
+            <>
+              <div
+                className="absolute inset-0 transition-opacity duration-400"
+                style={{
+                  background: `linear-gradient(135deg, ${study.color}0a, ${study.color}20)`,
+                  opacity: hovered ? 1 : 0.5,
+                }}
+              />
+              <span className="font-sans text-[0.8rem] text-text-muted/30 tracking-[0.05em] uppercase z-10">
+                Project Image
+              </span>
+            </>
+          )}
         </div>
 
         {/* Content */}

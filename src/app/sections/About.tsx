@@ -9,11 +9,13 @@ export default function About() {
     >
       <Reveal>
         <div className="border-t border-border pt-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          {/* Photo placeholder */}
-          <div className="w-full aspect-[4/5] bg-bg-card rounded-[10px] flex items-center justify-center">
-            <span className="font-sans text-[0.8rem] text-text-muted/40 uppercase tracking-[0.05em]">
-              Photo
-            </span>
+          {/* Profile photo */}
+          <div className="w-full aspect-[4/5] bg-bg-card rounded-[10px] overflow-hidden">
+            <img
+              src="/images/about/adam-rotmil-creative-design-studio-portrait.jpeg"
+              alt="Adam Rotmil"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Bio */}

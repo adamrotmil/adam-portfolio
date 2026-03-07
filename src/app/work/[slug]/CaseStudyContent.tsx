@@ -79,6 +79,7 @@ function RenderSection({ section }: { section: ProjectSection }) {
                 height={imgs[0].height || 480}
                 label={imgs[0].label}
                 dark={imgs[0].dark}
+                src={imgs[0].src}
               />
             </Reveal>
           )}
@@ -90,6 +91,7 @@ function RenderSection({ section }: { section: ProjectSection }) {
                     height={img.height || 360}
                     label={img.label}
                     dark={img.dark}
+                    src={img.src}
                   />
                 </Reveal>
               ))}
@@ -102,6 +104,7 @@ function RenderSection({ section }: { section: ProjectSection }) {
                   height={imgs[0].height || 520}
                   label={imgs[0].label}
                   dark={imgs[0].dark}
+                  src={imgs[0].src}
                 />
               </Reveal>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
@@ -111,6 +114,7 @@ function RenderSection({ section }: { section: ProjectSection }) {
                       height={img.height || 360}
                       label={img.label}
                       dark={img.dark}
+                      src={img.src}
                     />
                   </Reveal>
                 ))}
@@ -124,6 +128,7 @@ function RenderSection({ section }: { section: ProjectSection }) {
                   height={imgs[0].height || 540}
                   label={imgs[0].label}
                   dark={imgs[0].dark}
+                  src={imgs[0].src}
                 />
               </Reveal>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
@@ -133,6 +138,7 @@ function RenderSection({ section }: { section: ProjectSection }) {
                       height={img.height || 280}
                       label={img.label}
                       dark={img.dark}
+                      src={img.src}
                     />
                   </Reveal>
                 ))}
@@ -156,6 +162,7 @@ function RenderSection({ section }: { section: ProjectSection }) {
                 <ImagePlaceholder
                   height={section.images?.[0]?.height || 480}
                   label={section.images?.[0]?.label || "Project Image"}
+                  src={section.images?.[0]?.src}
                 />
               </div>
             </Reveal>
@@ -296,6 +303,7 @@ export default function CaseStudyContent({ project }: { project: Project }) {
               height={560}
               label={`${project.title} — Hero Shot`}
               dark
+              src={project.heroImage}
             />
           </div>
         </Reveal>
