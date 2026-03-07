@@ -590,17 +590,24 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "images",
+        layout: "desktop-showcase",
         images: [
           {
             label: "Respond AI — Dashboard & Messaging Interface",
-            dark: true,
-            height: 480,
             src: "/images/respond-ai/respond-messaging-2x.png",
           },
-          { label: "Email View — LLM Pre-drafted Responses", height: 360, src: "/images/respond-ai/respond-home.png" },
+          {
+            label: "Email View — LLM Pre-drafted Responses",
+            src: "/images/respond-ai/respond-home.png",
+          },
+        ],
+      },
+      {
+        type: "images",
+        layout: "phone-gallery",
+        images: [
           {
             label: "Driver Follow-up — Contextual AI Suggestions",
-            height: 360,
             src: "/images/respond-ai/driver-followup-2.png",
           },
         ],
@@ -802,15 +809,20 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "images",
+        layout: "desktop-showcase",
         images: [
           {
-            label: "MyWellness — Patient Mobile App",
-            dark: true,
-            height: 480,
+            label: "MyWellness — Patient Dashboard",
             src: "/images/miami/my-wellness-dashboard.png",
           },
-          { label: "Doctor Dashboard — Symptom Trends", height: 360, src: "/images/miami/Patient-coaching.png" },
-          { label: "Real-time Coaching Interface", height: 360, src: "/images/miami/Messaging.png" },
+          {
+            label: "Doctor Dashboard — Patient Coaching",
+            src: "/images/miami/Patient-coaching.png",
+          },
+          {
+            label: "Real-time Messaging Interface",
+            src: "/images/miami/Messaging.png",
+          },
         ],
       },
       {
@@ -911,15 +923,20 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "images",
+        layout: "desktop-showcase",
         images: [
           {
             label: "Content Studio — Network Topology Canvas",
-            dark: true,
-            height: 520,
             src: "/images/content-studio/cyber-training-canvas-designer.png",
           },
-          { label: "Container Palette — VM Configuration", height: 360, src: "/images/content-studio/design-system-components.png" },
-          { label: "Properties Panel — System Resources", height: 360, src: "/images/content-studio/design-system-components-slots.png" },
+          {
+            label: "Container Palette — VM Configuration",
+            src: "/images/content-studio/design-system-components.png",
+          },
+          {
+            label: "Properties Panel — System Resources",
+            src: "/images/content-studio/design-system-components-slots.png",
+          },
         ],
       },
       {
@@ -1029,15 +1046,27 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "images",
+        layout: "desktop-showcase",
         images: [
           {
             label: "401(k) Dashboard — Account Overview",
-            dark: true,
-            height: 480,
             src: "/images/trowe-price/Landing-page-401k-overview.jpg",
           },
-          { label: "Distribution Flow — Step by Step", height: 360, src: "/images/trowe-price/Workshop-UXR.jpg" },
-          { label: "Financial Wellness — Goal Tracking", height: 360, src: "/images/trowe-price/03-Testing-UXR.png" },
+          {
+            label: "Usability Testing — Task Success Metrics",
+            src: "/images/trowe-price/03-Testing-UXR.png",
+          },
+        ],
+      },
+      {
+        type: "images",
+        images: [
+          {
+            label: "Design Sprint Workshop — Journey Mapping & Jobs-to-be-Done",
+            dark: true,
+            height: 480,
+            src: "/images/trowe-price/Workshop-UXR.jpg",
+          },
         ],
       },
       {
