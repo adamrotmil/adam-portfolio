@@ -1241,11 +1241,13 @@ export const PROJECTS: Project[] = [
       "A platform that matches doctors and pharmacists to facilitate collaboration, improving patient outcomes through better coordination between prescribers and dispensers.",
     tags: ["Healthcare", "Platform", "Matching", "Collaboration"],
     color: "#0ea5e9",
+    thumbnail: "/images/collabmatch/collab-match-illustrative.png",
+    heroImage: "/images/collabmatch/collab-match-illustrative.png",
     meta: [
       { label: "Client", value: "CollabMatch (Startup)" },
       { label: "Role", value: "Product Designer" },
       { label: "Duration", value: "TBD" },
-      { label: "Platform", value: "Web" },
+      { label: "Platform", value: "Web + Mobile" },
     ],
     sections: [
       {
@@ -1255,31 +1257,64 @@ export const PROJECTS: Project[] = [
         heading: "Connecting doctors and pharmacists for better patient care",
         body: [
           "CollabMatch is a platform designed to bridge the gap between doctors and pharmacists, enabling them to find and collaborate with each other more effectively. The goal was to improve patient outcomes by making it easier for prescribers and dispensers to coordinate on treatment plans.",
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "02",
-        sectionLabel: "Discovery",
-        heading: "Understanding the collaboration gap in healthcare",
-        body: [
           "Worked directly with the founder to understand the problem space — the lack of structured communication channels between doctors and pharmacists leads to medication errors, missed interactions, and suboptimal patient care. The platform needed to make matching intuitive and collaboration frictionless.",
         ],
       },
       {
         type: "text",
-        sectionNumber: "03",
-        sectionLabel: "Design",
-        heading: "Designing the matching and collaboration experience",
+        sectionNumber: "02",
+        sectionLabel: "Profile & Discovery",
+        heading: "Making the right match",
         body: [
-          "Placeholder — details on the matching algorithm UX, profile creation flows, collaboration tools, and communication features to be added.",
+          "The core of the platform is a provider profile system — practitioners create detailed profiles with their collaboration preferences, specialties, location, and credentials. A review and rating system helps build trust between potential collaborators. The search and discovery experience lets providers filter by field of practice, location, and availability to find the right match.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
+          {
+            src: "/images/collabmatch/View Profile-desktop.png",
+            label: "Provider profile with reviews and active connections",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "03",
+        sectionLabel: "Messaging",
+        heading: "From discovery to collaboration",
+        body: [
+          "Once matched, providers communicate through a built-in messaging system. The mobile-first messaging experience supports the real-world workflow — physicians and pharmacists coordinating on the go between appointments and consultations. Connection slots and a freemium upgrade path drive the business model.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "phone-gallery",
+        images: [
+          {
+            src: "/images/collabmatch/Messages-mobile-2.png",
+            label: "Search Physicians",
+          },
+          {
+            src: "/images/collabmatch/Profile-mobile.png",
+            label: "Provider profile",
+          },
+          {
+            src: "/images/collabmatch/Messages-mobile.png",
+            label: "Messages inbox",
+          },
+          {
+            src: "/images/collabmatch/Chat-mobile.png",
+            label: "Chat thread",
+          },
         ],
       },
     ],
     outcome: {
       heading: "Enabling healthcare collaboration",
       body: [
-        "Placeholder — outcome details and metrics to be added.",
+        "Designed the end-to-end experience from profile creation to active collaboration, working directly with the founder to validate the matching model and messaging flows with practicing healthcare professionals.",
       ],
       contributions: [
         "Product Design",
@@ -1287,9 +1322,7 @@ export const PROJECTS: Project[] = [
         "Interaction Design",
         "Prototyping",
       ],
-      collaborators: [
-        "Founder",
-      ],
+      collaborators: ["Founder"],
       tools: ["Figma"],
     },
     nextProject: {
@@ -1436,6 +1469,9 @@ export const PROJECTS: Project[] = [
       "An innovation management platform where government agencies issue calls for entries and commercial-sector innovators submit proposals and technical demos. Part of the deep tech pipeline modernizing how SOCOM conducts BAAs and acquires new capabilities.",
     tags: ["Defense", "GovTech", "Innovation", "Enterprise"],
     color: "#475569",
+    thumbnail: "/images/vulcan/vulcan.png",
+    heroImage: "/images/vulcan/vulcan.png",
+    heroObjectPosition: "top",
     meta: [
       { label: "Client", value: "Cylitix / DoD (SOCOM)" },
       { label: "Role", value: "Product Designer" },
@@ -1456,39 +1492,74 @@ export const PROJECTS: Project[] = [
       {
         type: "text",
         sectionNumber: "02",
-        sectionLabel: "Search & Discovery",
-        heading: "Making innovation findable",
+        sectionLabel: "Call Authoring",
+        heading: "Building structured calls for innovation",
         body: [
-          "Designed the search experience for navigating a complex landscape of proposals, capabilities, and innovator profiles. The search UI needed to support both broad exploration and precise filtering across technical domains, readiness levels, and compliance criteria.",
+          "Government program managers create calls through a multi-step authoring flow. The form builder supports conditional logic, branching, and custom question types — from technical focus areas to cost estimates and milestone timelines. Skip logic lets authors create adaptive submission forms that route innovators through relevant sections based on their domain.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
+          {
+            src: "/images/vulcan/form-skip-logic.png",
+            label: "Form builder with conditional skip logic",
+          },
         ],
       },
       {
         type: "text",
         sectionNumber: "03",
-        sectionLabel: "Detail Pages",
-        heading: "Structured views for evaluating proposals",
+        sectionLabel: "Question Types",
+        heading: "Flexible data collection for complex submissions",
         body: [
-          "Designed detail pages that surface the information evaluators need — technical approach, team qualifications, timeline, and demo materials — in a scannable, consistent format across hundreds of submissions.",
+          "The platform supports a range of question types tailored to defense innovation evaluation — from ROM cost estimates and milestone timelines to technical capability assessments. Each question type is configurable with validation rules, optional fields, and rich text context.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
+          {
+            src: "/images/vulcan/8.png",
+            label: "ROM Cost Estimate question type",
+          },
+          {
+            src: "/images/vulcan/11.png",
+            label: "Milestone timeline configuration",
+          },
         ],
       },
       {
         type: "text",
         sectionNumber: "04",
-        sectionLabel: "Design System",
-        heading: "A scalable component library for the platform",
+        sectionLabel: "Access Controls",
+        heading: "Managing collaboration across agencies",
         body: [
-          "Built out the design system underpinning the platform, ensuring consistency across search, detail, submission, and evaluation views.",
+          "Calls involve multiple stakeholders across different government organizations. The access control system lets program managers invite editors, set visibility permissions, and manage who can view and modify call details — supporting the complex organizational dynamics of defense procurement.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
+          {
+            src: "/images/vulcan/Add an Editor and Set Visibility.png",
+            label: "Editor management and visibility controls",
+          },
         ],
       },
       {
         type: "quote",
-        quote: "Note: Project content shown uses illustrative/anonymized data due to the sensitive nature of the defense innovation pipeline.",
+        quote:
+          "Note: Project content shown uses illustrative/anonymized data due to the sensitive nature of the defense innovation pipeline.",
       },
     ],
     outcome: {
       heading: "Enabling the deep tech pipeline",
       body: [
-        "Placeholder — outcome details to be added. The platform supports SOCOM's modernized approach to capability acquisition, streamlining the path from government need to commercial innovation.",
+        "The platform supports SOCOM's modernized approach to capability acquisition, streamlining the path from government need to commercial innovation through structured authoring, evaluation, and collaboration tools.",
       ],
       contributions: [
         "Product Design",
@@ -1496,10 +1567,7 @@ export const PROJECTS: Project[] = [
         "Information Architecture",
         "Design System",
       ],
-      collaborators: [
-        "Cylitix Team",
-        "DoD Stakeholders",
-      ],
+      collaborators: ["Cylitix Team", "DoD Stakeholders"],
       tools: ["Figma"],
     },
     nextProject: {
