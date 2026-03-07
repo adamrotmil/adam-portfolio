@@ -264,6 +264,94 @@ export const PROJECTS: Project[] = [
       tools: ["Figma", "Figjam", "Miro", "Notion", "Claude", "Cursor"],
     },
     nextProject: {
+      slug: "ai-training",
+      title: "AI Model Training",
+      subtitle: "Evaluating Frontier LLMs for Google, OpenAI & More",
+    },
+  },
+  {
+    slug: "ai-training",
+    title: "AI Model Training",
+    subtitle: "Evaluating Frontier LLMs for Google, OpenAI & More",
+    description:
+      "Contract work contributing to the development of leading AI models including Google's Gemini Copilot and OpenAI's ChatGPT through multi-axis evaluation, SFT rating, and RLHF — assessing groundedness, truthfulness, instruction-following, safety, and factual accuracy.",
+    tags: ["AI / LLMs", "RLHF", "SFT", "Evaluation"],
+    color: "#10b981",
+    featured: true,
+    meta: [
+      { label: "Client", value: "Google, OpenAI & Others (via DataAnnotation)" },
+      { label: "Role", value: "AI Training Specialist / Evaluator" },
+      { label: "Duration", value: "2024" },
+      { label: "Platform", value: "Web-based evaluation tools" },
+    ],
+    sections: [
+      {
+        type: "text",
+        sectionNumber: "01",
+        sectionLabel: "Overview",
+        heading: "Shaping the next generation of AI models",
+        body: [
+          "Contributed to the training and evaluation of frontier large language models through structured human feedback. The work involved multi-axis rating systems used for supervised fine-tuning (SFT) and reinforcement learning from human feedback (RLHF).",
+          "Each response was evaluated across dimensions including groundedness, truthfulness, instruction-following, safety, and factual accuracy. This work directly shaped model behavior for products used by hundreds of millions of people.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "02",
+        sectionLabel: "Google — Gemini",
+        heading: "Evaluating Gemini Copilot for Google",
+        body: [
+          "Worked on evaluation tasks for Google's Gemini Copilot, rating model outputs across multiple quality axes. The project involved assessing the model's ability to follow complex instructions, provide grounded and factually accurate responses, and maintain safety guardrails.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "03",
+        sectionLabel: "OpenAI — ChatGPT",
+        heading: "Contributing to the next version of ChatGPT",
+        body: [
+          "Evaluated and rated outputs for a new version of ChatGPT, applying the same rigorous multi-axis assessment framework. The work focused on improving the model's conversational quality, factual reliability, and alignment with user intent.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "04",
+        sectionLabel: "Masked Projects",
+        heading: "Additional work under code names",
+        body: [
+          "Some projects were masked under internal code names — common practice in frontier AI development. While the end client wasn't always disclosed, the nature of the work (e.g., domain-specific queries about aerospace and space exploration) suggested connections to companies like SpaceX. Regardless of the client, the evaluation methodology remained consistent and rigorous.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "05",
+        sectionLabel: "Quality Assurance",
+        heading: "Reviewing other evaluators' work",
+        body: [
+          "Beyond direct evaluation, also served in a quality assurance capacity — reviewing other evaluators' ratings for consistency, accuracy, and adherence to rubric standards. This meta-review role helped maintain the integrity of the training data pipeline.",
+        ],
+      },
+    ],
+    outcome: {
+      heading: "Contributing to models used by billions",
+      body: [
+        "This work sits at the intersection of AI development and human judgment — a critical but often invisible layer in how frontier models learn to be helpful, harmless, and honest. The evaluations contributed directly to model versions that shipped to hundreds of millions of users worldwide.",
+      ],
+      contributions: [
+        "Multi-axis LLM Evaluation",
+        "SFT & RLHF Rating",
+        "Quality Assurance",
+        "Rubric Interpretation",
+        "Cross-model Evaluation",
+      ],
+      collaborators: [
+        "DataAnnotation",
+        "Google AI",
+        "OpenAI",
+      ],
+      tools: ["DataAnnotation Platform", "Custom Evaluation Tools"],
+    },
+    nextProject: {
       slug: "gator",
       title: "Gator",
       subtitle: "AI Tech Support Chatbot",
@@ -992,6 +1080,325 @@ export const PROJECTS: Project[] = [
         "Subject Matter Experts",
       ],
       tools: ["Sketch", "InVision", "Miro", "Jira"],
+    },
+    nextProject: {
+      slug: "collab-match",
+      title: "CollabMatch",
+      subtitle: "Doctor–Pharmacist Collaboration Platform",
+    },
+  },
+  {
+    slug: "collab-match",
+    title: "CollabMatch",
+    subtitle: "Doctor–Pharmacist Collaboration Platform",
+    description:
+      "A platform that matches doctors and pharmacists to facilitate collaboration, improving patient outcomes through better coordination between prescribers and dispensers.",
+    tags: ["Healthcare", "Platform", "Matching", "Collaboration"],
+    color: "#0ea5e9",
+    meta: [
+      { label: "Client", value: "CollabMatch (Startup)" },
+      { label: "Role", value: "Product Designer" },
+      { label: "Duration", value: "TBD" },
+      { label: "Platform", value: "Web" },
+    ],
+    sections: [
+      {
+        type: "text",
+        sectionNumber: "01",
+        sectionLabel: "Overview",
+        heading: "Connecting doctors and pharmacists for better patient care",
+        body: [
+          "CollabMatch is a platform designed to bridge the gap between doctors and pharmacists, enabling them to find and collaborate with each other more effectively. The goal was to improve patient outcomes by making it easier for prescribers and dispensers to coordinate on treatment plans.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "02",
+        sectionLabel: "Discovery",
+        heading: "Understanding the collaboration gap in healthcare",
+        body: [
+          "Worked directly with the founder to understand the problem space — the lack of structured communication channels between doctors and pharmacists leads to medication errors, missed interactions, and suboptimal patient care. The platform needed to make matching intuitive and collaboration frictionless.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "03",
+        sectionLabel: "Design",
+        heading: "Designing the matching and collaboration experience",
+        body: [
+          "Placeholder — details on the matching algorithm UX, profile creation flows, collaboration tools, and communication features to be added.",
+        ],
+      },
+    ],
+    outcome: {
+      heading: "Enabling healthcare collaboration",
+      body: [
+        "Placeholder — outcome details and metrics to be added.",
+      ],
+      contributions: [
+        "Product Design",
+        "UX Research",
+        "Interaction Design",
+        "Prototyping",
+      ],
+      collaborators: [
+        "Founder",
+      ],
+      tools: ["Figma"],
+    },
+    nextProject: {
+      slug: "freely-tax",
+      title: "Freely.tax",
+      subtitle: "Tax Accounting Platform",
+    },
+  },
+  {
+    slug: "freely-tax",
+    title: "Freely.tax",
+    subtitle: "Tax Accounting Platform",
+    description:
+      "A tax accounting platform based in France, designed to simplify tax preparation and filing for individuals and businesses.",
+    tags: ["FinTech", "Tax", "SaaS", "Accounting"],
+    color: "#f59e0b",
+    meta: [
+      { label: "Client", value: "Freely.tax" },
+      { label: "Role", value: "Product Designer" },
+      { label: "Duration", value: "TBD" },
+      { label: "Platform", value: "Web" },
+    ],
+    sections: [
+      {
+        type: "text",
+        sectionNumber: "01",
+        sectionLabel: "Overview",
+        heading: "Making tax preparation simple and accessible",
+        body: [
+          "Freely.tax is a France-based tax accounting platform aimed at streamlining tax preparation and filing. The design challenge was to take inherently complex financial and regulatory workflows and make them approachable for a broad user base.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "02",
+        sectionLabel: "Discovery",
+        heading: "Understanding tax complexity across markets",
+        body: [
+          "Worked directly with the founder to map out the tax preparation journey, identify pain points in existing solutions, and define the core product experience that would differentiate Freely.tax in the market.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "03",
+        sectionLabel: "Design",
+        heading: "Designing the tax preparation experience",
+        body: [
+          "Placeholder — details on the filing flows, document upload experience, calculation interfaces, and dashboard design to be added.",
+        ],
+      },
+    ],
+    outcome: {
+      heading: "Simplifying tax for everyone",
+      body: [
+        "Placeholder — outcome details and metrics to be added.",
+      ],
+      contributions: [
+        "Product Design",
+        "UX Research",
+        "Interaction Design",
+        "Prototyping",
+      ],
+      collaborators: [
+        "Founder",
+      ],
+      tools: ["Figma"],
+    },
+    nextProject: {
+      slug: "goldman-sachs",
+      title: "Goldman Sachs",
+      subtitle: "Advisor Portfolio Migration Platform",
+    },
+  },
+  {
+    slug: "goldman-sachs",
+    title: "Goldman Sachs",
+    subtitle: "Advisor Portfolio Migration Platform",
+    description:
+      "An internal platform for financial advisors to execute portfolio migrations into tax loss harvesting strategies, run those strategies, track performance against projections, and rebalance fund holdings.",
+    tags: ["FinTech", "Enterprise", "Portfolio Management", "Tax Strategy"],
+    color: "#7c9eb2",
+    meta: [
+      { label: "Client", value: "Goldman Sachs" },
+      { label: "Role", value: "Product Designer" },
+      { label: "Duration", value: "TBD" },
+      { label: "Platform", value: "Web (Internal)" },
+    ],
+    sections: [
+      {
+        type: "text",
+        sectionNumber: "01",
+        sectionLabel: "Overview",
+        heading: "Empowering advisors with intelligent portfolio tools",
+        body: [
+          "Designed an advisor-facing platform for Goldman Sachs that enabled financial advisors to migrate client portfolios into tax loss harvesting strategies. The platform supported strategy execution, performance tracking against projections, and rebalancing of funds and holdings.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "02",
+        sectionLabel: "Migration",
+        heading: "Designing the portfolio migration experience",
+        body: [
+          "Placeholder — details on the migration workflow, asset mapping, tax impact previews, and advisor decision-support tools to be added.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "03",
+        sectionLabel: "Strategy & Tracking",
+        heading: "Tax loss harvesting and performance monitoring",
+        body: [
+          "Placeholder — details on the strategy execution interface, performance dashboards, projection comparisons, and rebalancing tools to be added.",
+        ],
+      },
+    ],
+    outcome: {
+      heading: "Streamlining portfolio management at scale",
+      body: [
+        "Placeholder — outcome details and metrics to be added.",
+      ],
+      contributions: [
+        "Product Design",
+        "UX Research",
+        "Interaction Design",
+        "Prototyping",
+      ],
+      collaborators: [
+        "TBD",
+      ],
+      tools: ["TBD"],
+    },
+    nextProject: {
+      slug: "vulcan",
+      title: "Vulcan",
+      subtitle: "DoD Innovation Platform",
+    },
+  },
+  {
+    slug: "vulcan",
+    title: "Vulcan",
+    subtitle: "DoD Innovation Platform",
+    description:
+      "An innovation management platform where government agencies issue calls for entries and commercial-sector innovators submit proposals and technical demos. Part of the deep tech pipeline modernizing how SOCOM conducts BAAs and acquires new capabilities.",
+    tags: ["Defense", "GovTech", "Innovation", "Enterprise"],
+    color: "#475569",
+    meta: [
+      { label: "Client", value: "Cylitix / DoD (SOCOM)" },
+      { label: "Role", value: "Product Designer" },
+      { label: "Duration", value: "TBD" },
+      { label: "Platform", value: "Web" },
+    ],
+    sections: [
+      {
+        type: "text",
+        sectionNumber: "01",
+        sectionLabel: "Overview",
+        heading: "Modernizing how the Department of Defense discovers innovation",
+        body: [
+          "Vulcan is an innovation platform built for Cylitix with sponsorship from the Department of Defense. It modernizes the Broad Agency Announcement (BAA) process — how agencies like SOCOM issue calls for capabilities and how commercial-sector innovators respond with proposals and technical demonstrations.",
+          "The platform sits at the center of the deep tech pipeline, connecting government needs with commercial innovation in a structured, searchable, and evaluable way.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "02",
+        sectionLabel: "Search & Discovery",
+        heading: "Making innovation findable",
+        body: [
+          "Designed the search experience for navigating a complex landscape of proposals, capabilities, and innovator profiles. The search UI needed to support both broad exploration and precise filtering across technical domains, readiness levels, and compliance criteria.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "03",
+        sectionLabel: "Detail Pages",
+        heading: "Structured views for evaluating proposals",
+        body: [
+          "Designed detail pages that surface the information evaluators need — technical approach, team qualifications, timeline, and demo materials — in a scannable, consistent format across hundreds of submissions.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "04",
+        sectionLabel: "Design System",
+        heading: "A scalable component library for the platform",
+        body: [
+          "Built out the design system underpinning the platform, ensuring consistency across search, detail, submission, and evaluation views.",
+        ],
+      },
+      {
+        type: "quote",
+        quote: "Note: Project content shown uses illustrative/anonymized data due to the sensitive nature of the defense innovation pipeline.",
+      },
+    ],
+    outcome: {
+      heading: "Enabling the deep tech pipeline",
+      body: [
+        "Placeholder — outcome details to be added. The platform supports SOCOM's modernized approach to capability acquisition, streamlining the path from government need to commercial innovation.",
+      ],
+      contributions: [
+        "Product Design",
+        "Search UX",
+        "Information Architecture",
+        "Design System",
+      ],
+      collaborators: [
+        "Cylitix Team",
+        "DoD Stakeholders",
+      ],
+      tools: ["Figma"],
+    },
+    nextProject: {
+      slug: "uscis",
+      title: "USCIS",
+      subtitle: "DHS Immigration Services",
+    },
+  },
+  {
+    slug: "uscis",
+    title: "USCIS",
+    subtitle: "DHS Immigration Services",
+    description:
+      "Design work for U.S. Citizenship and Immigration Services under the Department of Homeland Security.",
+    tags: ["GovTech", "DHS", "Enterprise"],
+    color: "#1e3a5f",
+    meta: [
+      { label: "Client", value: "USCIS / DHS" },
+      { label: "Role", value: "Product Designer" },
+      { label: "Duration", value: "TBD" },
+      { label: "Platform", value: "TBD" },
+    ],
+    sections: [
+      {
+        type: "text",
+        sectionNumber: "01",
+        sectionLabel: "Overview",
+        heading: "Design work for U.S. Citizenship and Immigration Services",
+        body: [
+          "Placeholder — project details to be added.",
+        ],
+      },
+    ],
+    outcome: {
+      heading: "TBD",
+      body: [
+        "Placeholder — outcome details to be added.",
+      ],
+      contributions: [
+        "Product Design",
+      ],
+      collaborators: [
+        "TBD",
+      ],
+      tools: ["TBD"],
     },
     nextProject: {
       slug: "clarvos",
