@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { assetPath } from "@/lib/basePath";
 
 export default function ImagePlaceholder({
   height = 400,
@@ -34,7 +35,7 @@ export default function ImagePlaceholder({
     >
       {src ? (
         <img
-          src={src}
+          src={assetPath(src)}
           alt={label}
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition }}

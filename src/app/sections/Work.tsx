@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { PROJECTS } from "@/data/projects";
+import { assetPath } from "@/lib/basePath";
 
 function CaseStudyCard({
   study,
@@ -42,7 +43,7 @@ function CaseStudyCard({
         >
           {study.thumbnail ? (
             <img
-              src={study.thumbnail}
+              src={assetPath(study.thumbnail)}
               alt={`${study.title} — ${study.subtitle}`}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500"
               style={{

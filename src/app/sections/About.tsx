@@ -1,5 +1,6 @@
 import Reveal from "@/components/Reveal";
 import { BIO, EXPERIENCE, CREDENTIALS } from "@/data/about";
+import { assetPath } from "@/lib/basePath";
 
 export default function About() {
   return (
@@ -12,7 +13,7 @@ export default function About() {
           {/* Profile photo */}
           <div className="w-full aspect-[4/5] bg-bg-card rounded-[10px] overflow-hidden">
             <img
-              src="/images/about/adam-rotmil-creative-design-studio-portrait.jpeg"
+              src={assetPath("/images/about/adam-rotmil-creative-design-studio-portrait.jpeg")}
               alt="Adam Rotmil"
               className="w-full h-full object-cover"
             />

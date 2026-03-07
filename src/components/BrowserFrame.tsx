@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/basePath";
+
 export default function BrowserFrame({
   src,
   alt = "Application screen",
@@ -23,7 +25,7 @@ export default function BrowserFrame({
       </div>
       {/* Content */}
       <img
-        src={src}
+        src={assetPath(src)}
         alt={alt}
         className="w-full h-auto block"
       />
