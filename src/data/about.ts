@@ -32,6 +32,14 @@ export const EXPERIENCE = [
   },
 ];
 
+export const TEACHING = {
+  role: "Faculty, M.P.S. Design Program",
+  institution: "Maryland Institute College of Art",
+  period: "2017 – 2020",
+  description:
+    "I taught a graduate course on product design at America's oldest art college. I developed original course content and taught multiple classes of 20+ students from all backgrounds. Many of my students went on to become design directors, lead designers, and accessibility experts.",
+};
+
 export const CREDENTIALS = [
   "Published in Forbes & NYT",
   "MICA Faculty",

@@ -1494,46 +1494,141 @@ export const PROJECTS: Project[] = [
     nextProject: {
       slug: "uscis",
       title: "USCIS",
-      subtitle: "DHS Immigration Services",
+      subtitle: "U.S. Citizenship & Immigration Services",
     },
   },
   {
     slug: "uscis",
     title: "USCIS",
-    subtitle: "DHS Immigration Services",
+    subtitle: "U.S. Citizenship & Immigration Services",
     description:
-      "Design work for U.S. Citizenship and Immigration Services under the Department of Homeland Security.",
-    tags: ["GovTech", "DHS", "Enterprise"],
+      "Led the redesign of the main identity system (CIS 2) used by USCIS adjudicators to verify applicant qualifications and check historical encounters — serving 5,000+ users processing ~35k applications per day.",
+    tags: ["GovTech", "DHS", "Enterprise", "Identity & Access"],
     color: "#1e3a5f",
     meta: [
       { label: "Client", value: "USCIS / DHS" },
-      { label: "Role", value: "Product Designer" },
-      { label: "Duration", value: "TBD" },
-      { label: "Platform", value: "TBD" },
+      { label: "Role", value: "Craft Lead, Interaction Design" },
+      { label: "Duration", value: "2 years" },
+      { label: "Scope", value: "Field Research, Identity & Case-Management UX, RBAC/ABAC, Delivery" },
     ],
     sections: [
       {
         type: "text",
         sectionNumber: "01",
-        sectionLabel: "Overview",
-        heading: "Design work for U.S. Citizenship and Immigration Services",
+        sectionLabel: "Context",
+        heading: "Redesigning the backbone of DHS identity services",
         body: [
-          "Placeholder — project details to be added.",
+          "USCIS needed to modernize CIS 2 — the main identity system used by adjudicators to verify applicant qualifications and check historical encounters. The system had been originally designed in the 1970s and served as the backbone for DHS identity services that downstream platforms like Palantir ontology rely on.",
+          "How might we drive person-centric identity and case-management UX — A-number search, cross-record timelines, audit/lineage, RBAC/ABAC, and error-handling — at a scale of 5,000+ users processing ~35k applications per day?",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "02",
+        sectionLabel: "My Role",
+        heading: "Leading design across four work streams",
+        body: [
+          "Craft Lead for interaction design, managing a team of 6 designers across 4 work streams. I was hands-on with design while also leading teams as the face of the work to external stakeholders across USCIS, ICE, and CBP.",
+        ],
+      },
+      {
+        type: "stats",
+        stats: [
+          { number: 5, suffix: "k+", label: "Users" },
+          { number: 35, suffix: "k", label: "Apps / day" },
+          { number: 100, suffix: "+", label: "User interviews" },
+          { number: 16, suffix: "", label: "Design sprint weeks" },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "03",
+        sectionLabel: "Discovery",
+        heading: "Deep dive into existing systems",
+        body: [
+          "The existing system was quite old and in need of modernization. I began with a deep dive of existing systems and methods, as well as interviews with over 100 users.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "04",
+        sectionLabel: "Field Research",
+        heading: "Contextual research at the border",
+        body: [
+          "During contextual research we saw a heavily paper-based system, with dozens of fragmented digital touchpoints that the users did not really trust.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "05",
+        sectionLabel: "Observations",
+        heading: "Co-creation and iterative prototyping",
+        body: [
+          "Delivery team could not start right away, so we did a deep dive on co-creation and iterative prototyping.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "06",
+        sectionLabel: "Site Visits",
+        heading: "Understanding how systems overlapped",
+        body: [
+          "We focused on two things: people's working relationships and the data they need. We visited sites across the country — California, Texas, Florida, Missouri, Vermont, Virginia, and more.",
+          "At the end, we understood how systems overlapped. Some were being used for just one datapoint, presenting an opportunity to simplify the process.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "07",
+        sectionLabel: "Systems Analysis",
+        heading: "Mapping system usage across agencies",
+        body: [
+          "We created a system usage matrix plotting internal and external usage by agency — USCIS, ICE, CBP, and external systems. This revealed which systems overlapped and where consolidation was possible.",
+          "We also identified opportunities at the service level to consolidate roles and streamline business processes.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "08",
+        sectionLabel: "Design Sprints",
+        heading: "16 sprint weeks of discovery and testing",
+        body: [
+          "We ran 16 design sprint weeks, each focused on a theme from the research, to discover product features. We tested with users at least 2x per week.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "09",
+        sectionLabel: "Solution",
+        heading: "One cohesive interface — like a Google search",
+        body: [
+          'The experience changed along the way, but the core idea to "make it feel like a Google search" remained. We developed a person-centric interface with A-number search, cross-record timelines, audit trails, and role-based access controls (RBAC/ABAC) — merging all systems into one cohesive experience.',
+          "CIS 2 now underpins DHS identity services that downstream platforms like Palantir ontology rely on, serving 5,000+ users and processing approximately 35,000 applications per day.",
         ],
       },
     ],
     outcome: {
-      heading: "TBD",
+      heading: "The backbone of DHS identity services",
       body: [
-        "Placeholder — outcome details to be added.",
+        "By consolidating disparate systems into a unified, person-centric platform, adjudicators gained a single source of truth for applicant identity — with cross-record timelines, granular RBAC/ABAC controls, and full audit lineage. CIS 2 now serves as the foundation that downstream platforms like Palantir ontology depend on.",
       ],
       contributions: [
-        "Product Design",
+        "Design Leadership",
+        "Field Research",
+        "Co-creation Workshops",
+        "Identity & Case-Management UX",
+        "RBAC / ABAC Design",
+        "Interaction Design",
+        "Iterative Prototyping",
+        "Delivery",
       ],
       collaborators: [
-        "TBD",
+        "1 Design Lead",
+        "4 IxD",
+        "1 VizD",
+        "1 Business Designer",
       ],
-      tools: ["TBD"],
+      tools: ["Figma", "Prototyping"],
     },
     nextProject: {
       slug: "clarvos",

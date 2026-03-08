@@ -1,5 +1,5 @@
 import Reveal from "@/components/Reveal";
-import { BIO, EXPERIENCE, CREDENTIALS } from "@/data/about";
+import { BIO, EXPERIENCE, CREDENTIALS, TEACHING } from "@/data/about";
 import { assetPath } from "@/lib/basePath";
 
 export default function About() {
@@ -63,6 +63,27 @@ export default function About() {
                   </span>
                 </div>
               ))}
+            </div>
+
+            {/* Teaching */}
+            <div className="border-t border-border pt-6 mt-6">
+              <p className="font-sans text-xs text-text-muted uppercase tracking-[0.08em] mb-4">
+                Teaching
+              </p>
+              <div>
+                <span className="font-sans text-[0.92rem] text-text-primary">
+                  {TEACHING.role}
+                </span>
+                <span className="font-sans text-[0.85rem] text-text-muted ml-2">
+                  {TEACHING.institution}
+                </span>
+                <span className="font-sans text-[0.78rem] text-text-muted hidden sm:inline ml-2">
+                  · {TEACHING.period}
+                </span>
+              </div>
+              <p className="font-sans text-[0.88rem] leading-[1.6] text-text-secondary mt-2">
+                {TEACHING.description}
+              </p>
             </div>
 
             {/* Credentials */}
