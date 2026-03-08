@@ -10,7 +10,7 @@ export default function Contact() {
       <Reveal>
         <div className="border-t border-border pt-10 text-center">
           <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] font-normal text-text-primary mb-4">
-            Let&apos;s build something
+            Let&#x2019;s build something
           </h2>
           <p className="font-sans text-[1.05rem] text-text-secondary mb-8 leading-[1.6]">
             Available for product design, AI/UX consulting, and design

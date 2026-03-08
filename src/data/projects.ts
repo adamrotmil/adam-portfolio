@@ -64,13 +64,13 @@ export const PROJECTS: Project[] = [
           "The advertising industry runs on manual workflows. What if an AI could handle the entire pipeline?",
         body: [
           "Clarvos is an agentic AI platform that autonomously manages advertising campaigns end-to-end. It discovers trending topics, generates on-brand creative assets (images and video), launches campaigns across social media platforms, monitors performance in real-time, and optimizes spend — all with minimal human intervention.",
-          "My role as Lead Product Designer was to make an extraordinarily complex system feel approachable. The challenge wasn't just designing screens — it was designing trust. Users needed to understand what the AI was doing, why, and feel confident handing over creative and financial decisions to an autonomous agent.",
+          "My role as Lead Product Designer was to make an extraordinarily complex system feel approachable. The challenge wasn’t just designing screens — it was designing trust. Users needed to understand what the AI was doing, why, and feel confident handing over creative and financial decisions to an autonomous agent.",
         ],
       },
       {
         type: "quote",
         quote:
-          "The hardest design problem in agentic AI isn't the interface — it's designing the right level of human oversight without killing the autonomy.",
+          "The hardest design problem in agentic AI isn’t the interface — it’s designing the right level of human oversight without killing the autonomy.",
       },
       {
         type: "text",
@@ -109,7 +109,7 @@ export const PROJECTS: Project[] = [
         sectionLabel: "Creative Intelligence",
         heading: "AI-generated creatives that actually look good",
         body: [
-          "The platform generates on-brand ad creatives — images and video — by understanding a brand's visual identity, tone, and audience. Rather than outputting generic AI slop, the system produces polished, production-quality assets that feel intentionally designed.",
+          "The platform generates on-brand ad creatives — images and video — by understanding a brand’s visual identity, tone, and audience. Rather than outputting generic AI slop, the system produces polished, production-quality assets that feel intentionally designed.",
           "I designed the creative library as a command center where marketers can organize, review, and curate AI-generated variants. Assets are grouped into sets by campaign, with contextual actions for comparing, downloading, and reassigning creatives across platforms.",
         ],
       },
@@ -147,7 +147,7 @@ export const PROJECTS: Project[] = [
         type: "text",
         sectionNumber: "03",
         sectionLabel: "Trend Discovery",
-        heading: "Campaigns that start with what's already working",
+        heading: "Campaigns that start with what’s already working",
         body: [
           "Rather than guessing what content will resonate, Clarvos surfaces trending topics across social platforms in real time. The discover view ranks trends by volume, velocity, and audience alignment — then lets marketers launch a campaign directly from any trend with one click.",
           "I designed two complementary views: a data-driven rankings table for analytical users, and a visual mood board for creatives who think in imagery. Both paths lead to the same outcome — a pre-populated campaign brief built on real audience signals.",
@@ -198,7 +198,7 @@ export const PROJECTS: Project[] = [
         heading: "Prompt-driven video editing for non-editors",
         body: [
           "One of the most technically ambitious features: a scene-based video editor that lets marketers describe what they want in natural language. The AI generates video scenes from text prompts, complete with start frames, end frames, and transitions.",
-          "I designed the editor around a timeline metaphor familiar to anyone who's used iMovie or Premiere, but replaced the complexity with AI-powered controls. Users compose scenes by describing them, preview variations, and assemble final videos with drag-and-drop — no editing skills required.",
+          "I designed the editor around a timeline metaphor familiar to anyone who’s used iMovie or Premiere, but replaced the complexity with AI-powered controls. Users compose scenes by describing them, preview variations, and assemble final videos with drag-and-drop — no editing skills required.",
         ],
       },
       {
@@ -239,7 +239,7 @@ export const PROJECTS: Project[] = [
         body: [
           "Progressive Autonomy: Rather than presenting the AI as a black box, I designed a transparency model where users can see exactly what the agent is doing at each step. Users start with full manual control and gradually allow more autonomy as they gain confidence.",
           "Familiar Metaphors for Unfamiliar Technology: The video editor uses a timeline. The creative gallery uses a card grid. The campaign builder uses a wizard. Every complex AI interaction is wrapped in a pattern users already understand.",
-          "Designed for Iteration, Not Perfection: AI outputs aren't always right on the first try. I designed every creative surface with inline editing, quick regeneration, and A/B variant comparison built in.",
+          "Designed for Iteration, Not Perfection: AI outputs aren’t always right on the first try. I designed every creative surface with inline editing, quick regeneration, and A/B variant comparison built in.",
         ],
       },
     ],
@@ -247,7 +247,7 @@ export const PROJECTS: Project[] = [
       heading: "From concept to production",
       body: [
         "Clarvos is actively in production and evolving. The platform manages real ad spend across multiple social platforms, generating and optimizing campaigns autonomously. The design work established the interaction patterns and trust framework that make it possible for marketers to confidently delegate complex decisions to an AI agent.",
-        "This project reinforced a conviction I carry into every engagement: the best AI products don't replace human judgment — they amplify it. Design is the bridge that makes that amplification feel natural.",
+        "This project reinforced a conviction I carry into every engagement: the best AI products don’t replace human judgment — they amplify it. Design is the bridge that makes that amplification feel natural.",
       ],
       contributions: [
         "Product Discovery",
@@ -276,7 +276,7 @@ export const PROJECTS: Project[] = [
     title: "AI Model Training",
     subtitle: "Evaluating Frontier LLMs for Google, OpenAI & More",
     description:
-      "Contract work contributing to the development of OpenAI's ChatGPT, Google's Gemini, and other leading AI models through multi-axis evaluation, SFT rating, and RLHF — assessing groundedness, truthfulness, instruction-following, safety, and factual accuracy.",
+      "Contract work contributing to the development of OpenAI’s ChatGPT, Google’s Gemini, and other leading AI models through multi-axis evaluation, SFT rating, and RLHF — assessing groundedness, truthfulness, instruction-following, safety, and factual accuracy.",
     tags: ["AI / LLMs", "RLHF", "SFT", "Evaluation"],
     color: "#10b981",
     featured: true,
@@ -315,7 +315,7 @@ export const PROJECTS: Project[] = [
         sectionLabel: "Google — Gemini",
         heading: "Evaluating Gemini Copilot for Google",
         body: [
-          "Worked on evaluation tasks for Google's Gemini Copilot, rating model outputs across multiple quality axes. The project involved assessing the model's ability to follow complex instructions, provide grounded and factually accurate responses, and maintain safety guardrails.",
+          "Worked on evaluation tasks for Google’s Gemini Copilot, rating model outputs across multiple quality axes. The project involved assessing the model’s ability to follow complex instructions, provide grounded and factually accurate responses, and maintain safety guardrails.",
         ],
       },
       {
@@ -324,7 +324,7 @@ export const PROJECTS: Project[] = [
         sectionLabel: "OpenAI — ChatGPT",
         heading: "Contributing to the next version of ChatGPT",
         body: [
-          "Evaluated and rated outputs for a new version of ChatGPT, applying the same rigorous multi-axis assessment framework. The work focused on improving the model's conversational quality, factual reliability, and alignment with user intent.",
+          "Evaluated and rated outputs for a new version of ChatGPT, applying the same rigorous multi-axis assessment framework. The work focused on improving the model’s conversational quality, factual reliability, and alignment with user intent.",
         ],
       },
       {
@@ -333,16 +333,16 @@ export const PROJECTS: Project[] = [
         sectionLabel: "Masked Projects",
         heading: "Additional work under code names",
         body: [
-          "Some projects were masked under internal code names — common practice in frontier AI development. While the end client wasn't always disclosed, the nature of the work (e.g., domain-specific queries about aerospace and space exploration) suggested connections to companies like SpaceX. Regardless of the client, the evaluation methodology remained consistent and rigorous.",
+          "Some projects were masked under internal code names — common practice in frontier AI development. While the end client wasn’t always disclosed, the nature of the work (e.g., domain-specific queries about aerospace and space exploration) suggested connections to companies like SpaceX. Regardless of the client, the evaluation methodology remained consistent and rigorous.",
         ],
       },
       {
         type: "text",
         sectionNumber: "05",
         sectionLabel: "Quality Assurance",
-        heading: "Reviewing other evaluators' work",
+        heading: "Reviewing other evaluators’ work",
         body: [
-          "Beyond direct evaluation, also served in a quality assurance capacity — reviewing other evaluators' ratings for consistency, accuracy, and adherence to rubric standards. This meta-review role helped maintain the integrity of the training data pipeline.",
+          "Beyond direct evaluation, also served in a quality assurance capacity — reviewing other evaluators’ ratings for consistency, accuracy, and adherence to rubric standards. This meta-review role helped maintain the integrity of the training data pipeline.",
         ],
       },
     ],
@@ -411,7 +411,7 @@ export const PROJECTS: Project[] = [
         heading: "Get technicians in, not through a tutorial",
         body: [
           "I designed the complete mobile experience — from onboarding through diagnosis to guided repair flows. The design challenge was creating an interface that feels as simple as texting a knowledgeable friend, while handling the complexity of thousands of equipment models and diagnostic pathways underneath.",
-          "The onboarding is ruthlessly minimal: phone number verification, one permission prompt for the camera, and they're in. No account creation form. No feature tour. The first thing they see is Gator introducing itself and asking what they need help with.",
+          "The onboarding is ruthlessly minimal: phone number verification, one permission prompt for the camera, and they’re in. No account creation form. No feature tour. The first thing they see is Gator introducing itself and asking what they need help with.",
         ],
       },
       {
@@ -419,7 +419,7 @@ export const PROJECTS: Project[] = [
         layout: "phone-gallery",
         images: [
           { label: "Gator Splash Screen", src: "/images/gator/Gator-Splash.png" },
-          { label: "Welcome — Hey, it's Gator", src: "/images/gator/Diagnose-0.png" },
+          { label: "Welcome — Hey, it’s Gator", src: "/images/gator/Diagnose-0.png" },
         ],
       },
       {
@@ -428,8 +428,8 @@ export const PROJECTS: Project[] = [
         sectionLabel: "Equipment Recognition",
         heading: "The camera is the search bar",
         body: [
-          "Every HVAC unit has a barcode or serial number plate. Gator's scanner reads it instantly, pulling the exact make, model, and specs from its product database. No scrolling through menus, no typing model numbers on a tiny keyboard with cold fingers.",
-          "For units where the label is damaged or missing, there's a manual fallback: type the serial number or describe the unit. The AI can often identify equipment from a description of its appearance and the symptoms alone.",
+          "Every HVAC unit has a barcode or serial number plate. Gator’s scanner reads it instantly, pulling the exact make, model, and specs from its product database. No scrolling through menus, no typing model numbers on a tiny keyboard with cold fingers.",
+          "For units where the label is damaged or missing, there’s a manual fallback: type the serial number or describe the unit. The AI can often identify equipment from a description of its appearance and the symptoms alone.",
         ],
       },
       {
@@ -448,8 +448,8 @@ export const PROJECTS: Project[] = [
         heading:
           "Designing a chat that feels like talking to a senior tech",
         body: [
-          "The diagnostic conversation is Gator's core experience. The AI doesn't just answer questions — it asks the right ones. Each question narrows down the problem, just like an experienced technician would think through it.",
-          "I designed the chat to feel warm and confident without being patronizing. Gator has a personality — it's knowledgeable but approachable, like a coworker who's been doing this for 20 years and genuinely wants to help. The tone was as important as the UI.",
+          "The diagnostic conversation is Gator’s core experience. The AI doesn’t just answer questions — it asks the right ones. Each question narrows down the problem, just like an experienced technician would think through it.",
+          "I designed the chat to feel warm and confident without being patronizing. Gator has a personality — it’s knowledgeable but approachable, like a coworker who’s been doing this for 20 years and genuinely wants to help. The tone was as important as the UI.",
         ],
       },
       {
@@ -491,7 +491,7 @@ export const PROJECTS: Project[] = [
         sectionLabel: "Voice Mode",
         heading: "Hands free when it matters",
         body: [
-          "Technicians often can't hold a phone while working. Voice mode lets them speak naturally to Gator while keeping both hands on the equipment. The interface strips away to just the mascot, a mic button, and a camera option for sending photos mid-repair.",
+          "Technicians often can’t hold a phone while working. Voice mode lets them speak naturally to Gator while keeping both hands on the equipment. The interface strips away to just the mascot, a mic button, and a camera option for sending photos mid-repair.",
           "The voice interaction needed to feel like a real conversation, not a voice command interface. Gator listens, confirms understanding, and responds in the same warm tone as the text chat — just spoken aloud.",
         ],
       },
@@ -509,7 +509,7 @@ export const PROJECTS: Project[] = [
         sectionLabel: "Design Language",
         heading: "Green means go",
         body: [
-          "Gator's visual language is built on a deep forest green and warm off-whites — colors that feel professional and trustworthy without the cold clinical feel of most enterprise tools. The gator mascot adds personality and approachability to what could otherwise feel like a sterile diagnostic tool.",
+          "Gator’s visual language is built on a deep forest green and warm off-whites — colors that feel professional and trustworthy without the cold clinical feel of most enterprise tools. The gator mascot adds personality and approachability to what could otherwise feel like a sterile diagnostic tool.",
         ],
       },
       {
@@ -526,7 +526,7 @@ export const PROJECTS: Project[] = [
       heading: "Ready for development",
       body: [
         "The Gator prototype is fully designed in Figma with a wired click-through demo that covers the complete user journey from sign-in to completed repair. The design is ready for iOS development, with detailed specs, component documentation, and interaction annotations.",
-        "Designing Gator reinforced something I believe deeply: the most sophisticated AI is useless if the interface doesn't meet people where they are. A technician doesn't care about the model architecture — they care about fixing the AC before the customer gets home.",
+        "Designing Gator reinforced something I believe deeply: the most sophisticated AI is useless if the interface doesn’t meet people where they are. A technician doesn’t care about the model architecture — they care about fixing the AC before the customer gets home.",
       ],
       contributions: [
         "UI Design",
@@ -591,15 +591,15 @@ export const PROJECTS: Project[] = [
       {
         type: "quote",
         quote:
-          "Human-in-the-loop isn't a compromise — it's a feature. Operators stay in control while the AI handles the heavy lifting.",
+          "Human-in-the-loop isn’t a compromise — it’s a feature. Operators stay in control while the AI handles the heavy lifting.",
       },
       {
         type: "text",
         sectionNumber: "03",
         sectionLabel: "Command Center",
-        heading: "A central dashboard that helps operators get oriented for the day's work",
+        heading: "A central dashboard that helps operators get oriented for the day’s work",
         body: [
-          "Initial product and market research helped shape the MVP vision, where users have a central dashboard that helps them get oriented for the day's work. From this view, they can focus on high-priority actions, track email and message volumes, and monitor response quality scores.",
+          "Initial product and market research helped shape the MVP vision, where users have a central dashboard that helps them get oriented for the day’s work. From this view, they can focus on high-priority actions, track email and message volumes, and monitor response quality scores.",
         ],
       },
       {
@@ -675,7 +675,7 @@ export const PROJECTS: Project[] = [
       heading: "From prototype to production",
       body: [
         "Respond AI moved from concept through user testing to development handoff. The human-in-the-loop design pattern established a framework for integrating AI into existing operator workflows without disrupting the trust and personal touch that drivers rely on.",
-        "The project demonstrated that AI in logistics doesn't need to replace human operators — it needs to give them superpowers.",
+        "The project demonstrated that AI in logistics doesn’t need to replace human operators — it needs to give them superpowers.",
       ],
       contributions: [
         "Product Design",
@@ -733,7 +733,7 @@ export const PROJECTS: Project[] = [
         heading:
           "Patients can track their symptoms just by speaking in plain language.",
         body: [
-          "The system uses an LLM to extract and normalize keywords from a one-minute voice recording. PPG technology is also used to gather health metrics by reading the bloodflow through the patient's skin while they speak.",
+          "The system uses an LLM to extract and normalize keywords from a one-minute voice recording. PPG technology is also used to gather health metrics by reading the bloodflow through the patient’s skin while they speak.",
         ],
       },
       {
@@ -812,7 +812,7 @@ export const PROJECTS: Project[] = [
     title: "University of Miami",
     subtitle: "Clinical Cancer Research Platform",
     description:
-      "Designing research tools at the intersection of clinical practice and patient engagement for one of the country's leading academic medical centers.",
+      "Designing research tools at the intersection of clinical practice and patient engagement for one of the country’s leading academic medical centers.",
     tags: ["Health Tech", "Research", "Mobile"],
     color: "#f97316",
     thumbnail: "/images/miami/University-Miami-cover.png",
@@ -857,7 +857,7 @@ export const PROJECTS: Project[] = [
         heading:
           "From patient interviews to storyboards and wireframes",
         body: [
-          "Interviews with 8 cancer patients and 5 oncologists revealed that patients struggled to remember symptoms during clinic visits, and doctors needed real-time data for timely interventions. Both wanted a system that wouldn't add burden.",
+          "Interviews with 8 cancer patients and 5 oncologists revealed that patients struggled to remember symptoms during clinic visits, and doctors needed real-time data for timely interventions. Both wanted a system that wouldn’t add burden.",
           "I developed storyboards to map the patient journey — from daily check-ins to doctor reviews — and translated those into wireframes exploring video-based symptom capture, biometric data collection, and caregiver sharing flows.",
         ],
       },
@@ -931,9 +931,9 @@ export const PROJECTS: Project[] = [
         type: "text",
         sectionNumber: "05",
         sectionLabel: "Study Configuration",
-        heading: "Configurable study modules that adapt to each trial's needs",
+        heading: "Configurable study modules that adapt to each trial’s needs",
         body: [
-          "The platform's library system allows researchers to create and reuse questionnaire modules across studies. Each module supports configurable automation rules — if a patient misses a response or reports a severe symptom, the system can automatically notify the research team. This flexibility enabled new studies launched in partnership with Yale University.",
+          "The platform’s library system allows researchers to create and reuse questionnaire modules across studies. Each module supports configurable automation rules — if a patient misses a response or reports a severe symptom, the system can automatically notify the research team. This flexibility enabled new studies launched in partnership with Yale University.",
         ],
       },
       {
@@ -1072,7 +1072,7 @@ export const PROJECTS: Project[] = [
         sectionLabel: "Design System",
         heading: "Sprint Zero design system for agile delivery",
         body: [
-          "In order to work efficiently and collaborate effectively with developers, I created a streamlined design system that reflected the existing aspects of the client's enterprise framework. The design system made effective use of abstraction, nested components, variables, and slots — enabling modular content cards that accept different block types.",
+          "In order to work efficiently and collaborate effectively with developers, I created a streamlined design system that reflected the existing aspects of the client’s enterprise framework. The design system made effective use of abstraction, nested components, variables, and slots — enabling modular content cards that accept different block types.",
           "All team members found the design system to be a key enabler that ensured their success, both in terms of UX consistency as well as being able to work in an agile manner to distribute work and hit deadlines.",
         ],
       },
@@ -1139,7 +1139,7 @@ export const PROJECTS: Project[] = [
         heading:
           "Empowering retail investors to manage their 401(k) with confidence.",
         body: [
-          "T. Rowe Price's 401(k) service for retail investors relied heavily on support calls for account management, including distributions. Investors often felt guilty or discouraged when making withdrawals, and the process lacked financial wellness support.",
+          "T. Rowe Price’s 401(k) service for retail investors relied heavily on support calls for account management, including distributions. Investors often felt guilty or discouraged when making withdrawals, and the process lacked financial wellness support.",
           "The goal was to create a self-service platform that empowered investors to manage their 401(k) accounts while providing guidance and support to minimize the negative impact of withdrawals.",
         ],
       },
@@ -1213,7 +1213,7 @@ export const PROJECTS: Project[] = [
         heading: "Discovering and fixing discoverability issues in real time",
         body: [
           "Regular tests were run to confirm or falsify hypotheses under consideration. In one instance, the team realized that users may not even have known where to look for the starting point of the flow.",
-          "Based on that learning, they quickly pivoted to address discoverability issues, restructured some of the IA on the sitewide nav, and changed terminology to be less jargon-laden — such as changing 'take a distribution' to 'take a withdrawal.'",
+          "Based on that learning, they quickly pivoted to address discoverability issues, restructured some of the IA on the sitewide nav, and changed terminology to be less jargon-laden — such as changing ‘take a distribution’ to ‘take a withdrawal.’",
         ],
       },
       {
@@ -1588,7 +1588,7 @@ export const PROJECTS: Project[] = [
     outcome: {
       heading: "Enabling the deep tech pipeline",
       body: [
-        "The platform supports SOCOM's modernized approach to capability acquisition, streamlining the path from government need to commercial innovation through structured authoring, evaluation, and collaboration tools.",
+        "The platform supports SOCOM’s modernized approach to capability acquisition, streamlining the path from government need to commercial innovation through structured authoring, evaluation, and collaboration tools.",
       ],
       contributions: [
         "Product Design",

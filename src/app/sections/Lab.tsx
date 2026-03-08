@@ -28,7 +28,7 @@ export default function Lab() {
       <Reveal>
         <p className="font-sans text-base text-text-secondary leading-[1.6] max-w-[520px] mb-8">
           Experiments in code, design, and AI. Small interactive pieces that
-          explore ideas I&apos;m curious about — built with Claude, shipped to
+          explore ideas I&#x2019;m curious about — built with Claude, shipped to
           GitHub.
         </p>
       </Reveal>

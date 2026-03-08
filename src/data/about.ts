@@ -1,7 +1,7 @@
 export const BIO = [
-  "I've spent 20 years designing products across healthcare, finance, AI, and defense. I led the interaction design craft for 70 designers at Fjord/Accenture, ran product design for digital oncology R&D at AstraZeneca, and taught graduate students at MICA.",
+  "I\u2019ve spent 20 years designing products across healthcare, finance, AI, and defense. I led the interaction design craft for 70 designers at Fjord/Accenture, ran product design for digital oncology R&D at AstraZeneca, and taught graduate students at MICA.",
   "I studied art history, typography at the Basel School of Design, and completed coursework at Harvard. I lived in Japan for five years, where I practiced brush calligraphy and sumi-e painting — disciplines that still shape how I think about composition and restraint.",
-  "Now I'm building AI-native products and shipping code. I believe the best designers in the next decade will be the ones who can think in systems, prompt in natural language, and close the gap between vision and implementation.",
+  "Now I\u2019m building AI-native products and shipping code. I believe the best designers in the next decade will be the ones who can think in systems, prompt in natural language, and close the gap between vision and implementation.",
 ];
 
 export const EXPERIENCE = [
