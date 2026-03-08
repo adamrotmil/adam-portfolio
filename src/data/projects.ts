@@ -1502,24 +1502,24 @@ export const PROJECTS: Project[] = [
     title: "USCIS",
     subtitle: "U.S. Citizenship & Immigration Services",
     description:
-      "Led design for a modernization effort at USCIS, consolidating disparate systems into a unified platform so specialists can view accurate information and immigrants can receive benefits without delays.",
-    tags: ["GovTech", "DHS", "Enterprise", "Field Research"],
+      "Led the redesign of the main identity system (CIS 2) used by USCIS adjudicators to verify applicant qualifications and check historical encounters — serving 5,000+ users processing ~35k applications per day.",
+    tags: ["GovTech", "DHS", "Enterprise", "Identity & Access"],
     color: "#1e3a5f",
     meta: [
       { label: "Client", value: "USCIS / DHS" },
-      { label: "Role", value: "Lead Designer & Design Manager" },
-      { label: "Duration", value: "Six months" },
-      { label: "Scope", value: "Field Research, Co-creation, Product Design, Delivery" },
+      { label: "Role", value: "Craft Lead, Interaction Design" },
+      { label: "Duration", value: "2 years" },
+      { label: "Scope", value: "Field Research, Identity & Case-Management UX, RBAC/ABAC, Delivery" },
     ],
     sections: [
       {
         type: "text",
         sectionNumber: "01",
         sectionLabel: "Context",
-        heading: "Modernizing a system designed in the 1970s",
+        heading: "Redesigning the backbone of DHS identity services",
         body: [
-          "The government agency responsible for immigration needed to modernize its system for keeping track of information about people, which had been created in the 1970s.",
-          "How might we consolidate disparate systems and tools into a one-stop-shop, so specialists can view accurate information, and so immigrants can receive benefits without as many delays?",
+          "USCIS needed to modernize CIS 2 — the main identity system used by adjudicators to verify applicant qualifications and check historical encounters. The system had been originally designed in the 1970s and served as the backbone for DHS identity services that downstream platforms like Palantir ontology rely on.",
+          "How might we drive person-centric identity and case-management UX — A-number search, cross-record timelines, audit/lineage, RBAC/ABAC, and error-handling — at a scale of 5,000+ users processing ~35k applications per day?",
         ],
       },
       {
@@ -1528,14 +1528,14 @@ export const PROJECTS: Project[] = [
         sectionLabel: "My Role",
         heading: "Leading design across four work streams",
         body: [
-          "Lead designer in hands-on role, and design manager for team of 6 designers across 4 work streams.",
+          "Craft Lead for interaction design, managing a team of 6 designers across 4 work streams. I was hands-on with design while also leading teams as the face of the work to external stakeholders across USCIS, ICE, and CBP.",
         ],
       },
       {
         type: "stats",
         stats: [
-          { number: 6, suffix: "", label: "Designers managed" },
-          { number: 4, suffix: "", label: "Work streams" },
+          { number: 5, suffix: "k+", label: "Users" },
+          { number: 35, suffix: "k", label: "Apps / day" },
           { number: 100, suffix: "+", label: "User interviews" },
           { number: 16, suffix: "", label: "Design sprint weeks" },
         ],
@@ -1602,22 +1602,24 @@ export const PROJECTS: Project[] = [
         sectionLabel: "Solution",
         heading: "One cohesive interface — like a Google search",
         body: [
-          'The experience changed along the way, but the core idea to "make it feel like a Google search" remained. We developed an interactive timeline that merged all the systems into one cohesive interface.',
+          'The experience changed along the way, but the core idea to "make it feel like a Google search" remained. We developed a person-centric interface with A-number search, cross-record timelines, audit trails, and role-based access controls (RBAC/ABAC) — merging all systems into one cohesive experience.',
+          "CIS 2 now underpins DHS identity services that downstream platforms like Palantir ontology rely on, serving 5,000+ users and processing approximately 35,000 applications per day.",
         ],
       },
     ],
     outcome: {
-      heading: "Consolidating systems for faster immigration services",
+      heading: "The backbone of DHS identity services",
       body: [
-        "By consolidating disparate tools and systems into a unified platform, specialists gained access to accurate, real-time information — reducing delays and improving the experience for immigrants seeking benefits.",
+        "By consolidating disparate systems into a unified, person-centric platform, adjudicators gained a single source of truth for applicant identity — with cross-record timelines, granular RBAC/ABAC controls, and full audit lineage. CIS 2 now serves as the foundation that downstream platforms like Palantir ontology depend on.",
       ],
       contributions: [
         "Design Leadership",
         "Field Research",
         "Co-creation Workshops",
+        "Identity & Case-Management UX",
+        "RBAC / ABAC Design",
         "Interaction Design",
         "Iterative Prototyping",
-        "Product Design",
         "Delivery",
       ],
       collaborators: [
