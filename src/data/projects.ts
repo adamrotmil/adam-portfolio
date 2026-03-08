@@ -1048,30 +1048,6 @@ export const PROJECTS: Project[] = [
           },
         ],
       },
-      {
-        type: "text",
-        sectionNumber: "04",
-        sectionLabel: "Design System",
-        heading: "Sprint Zero design system for agile delivery",
-        body: [
-          "In order to work efficiently and collaborate effectively with developers, I created a streamlined design system that reflected the existing aspects of the client’s enterprise framework. The design system made effective use of abstraction, nested components, variables, and slots — enabling modular content cards that accept different block types.",
-          "All team members found the design system to be a key enabler that ensured their success, both in terms of UX consistency as well as being able to work in an agile manner to distribute work and hit deadlines.",
-        ],
-      },
-      {
-        type: "images",
-        layout: "desktop-showcase",
-        images: [
-          {
-            label: "Design System — Component Library",
-            src: "/images/content-studio/design-system-components.png",
-          },
-          {
-            label: "Component Architecture — Slot-based Content Cards",
-            src: "/images/content-studio/design-system-components-slots.png",
-          },
-        ],
-      },
     ],
     outcome: {
       heading: "Shipped within Sprint Zero",
