@@ -68,6 +68,11 @@ export const PROJECTS: Project[] = [
         ],
       },
       {
+        type: "video",
+        videoSrc: "/images/clarvos/clarvos-feed-hd-wide.mp4",
+        videoLabel: "Clarvos — Feed",
+      },
+      {
         type: "quote",
         quote:
           "The hardest design problem in agentic AI isn’t the interface — it’s designing the right level of human oversight without killing the autonomy.",
@@ -615,6 +620,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "video",
+        layout: "desktop-showcase",
         videoSrc: "/images/respond-ai/Email.mov",
         videoLabel: "Email Interface — AI-assisted Carrier Communication",
       },
@@ -639,6 +645,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "video",
+        layout: "desktop-showcase",
         videoSrc: "/images/respond-ai/Templates.mov",
         videoLabel: "Template Builder — Variable-based Response Templates",
       },
@@ -829,6 +836,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "video",
+        layout: "desktop-showcase",
         videoSrc: "/images/miami/Reflect-Demo.mov",
         videoLabel: "Reflect — Patient Video Check-in Demo",
       },

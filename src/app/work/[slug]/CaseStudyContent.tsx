@@ -324,35 +324,69 @@ function RenderSection({ section }: { section: ProjectSection }) {
       );
 
     case "video":
-      return (
-        <section className="bg-[#1a1a1c] py-[clamp(3rem,8vh,5rem)] px-[clamp(1.5rem,4vw,4rem)]">
-          <div className="max-w-[1200px] mx-auto">
-            <Reveal>
-              <div className="bg-[#2c2c2e] rounded-[12px] shadow-[0_16px_48px_rgba(0,0,0,0.35)] overflow-hidden">
-                {/* Title bar */}
-                <div className="flex items-center gap-2 px-4 py-2.5 bg-[#363638]">
-                  <div className="flex gap-[6px]">
-                    <div className="w-[10px] h-[10px] rounded-full bg-[#ff5f57]" />
-                    <div className="w-[10px] h-[10px] rounded-full bg-[#febc2e]" />
-                    <div className="w-[10px] h-[10px] rounded-full bg-[#28c840]" />
-                  </div>
-                  <div className="flex-1 flex justify-center">
-                    <div className="bg-[#2c2c2e] rounded-md px-4 py-1 text-[11px] text-[#8e8e93] font-sans max-w-[260px] truncate text-center">
-                      {section.videoLabel || "Video"}
-                    </div>
-                  </div>
-                  <div className="w-[54px]" />
-                </div>
-                {/* Video */}
+      if (section.layout === "phone-gallery") {
+        return (
+          <section className="bg-[#1a1a1c] py-[clamp(3rem,8vh,5rem)] px-[clamp(1.5rem,4vw,4rem)]">
+            <div className="max-w-[1200px] mx-auto flex justify-center">
+              <Reveal>
                 <video
                   src={assetPath(section.videoSrc || "")}
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full h-auto block"
+                  className="h-auto block max-h-[80vh] rounded-[12px]"
                 />
-              </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      }
+      if (section.layout === "desktop-showcase") {
+        return (
+          <section className="bg-[#1a1a1c] py-[clamp(3rem,8vh,5rem)] px-[clamp(1.5rem,4vw,4rem)]">
+            <div className="max-w-[1200px] mx-auto">
+              <Reveal>
+                <div className="bg-[#2c2c2e] rounded-[12px] shadow-[0_16px_48px_rgba(0,0,0,0.35)] overflow-hidden">
+                  <div className="flex items-center gap-2 px-4 py-2.5 bg-[#363638]">
+                    <div className="flex gap-[6px]">
+                      <div className="w-[10px] h-[10px] rounded-full bg-[#ff5f57]" />
+                      <div className="w-[10px] h-[10px] rounded-full bg-[#febc2e]" />
+                      <div className="w-[10px] h-[10px] rounded-full bg-[#28c840]" />
+                    </div>
+                    <div className="flex-1 flex justify-center">
+                      <div className="bg-[#2c2c2e] rounded-md px-4 py-1 text-[11px] text-[#8e8e93] font-sans max-w-[260px] truncate text-center">
+                        {section.videoLabel || "Video"}
+                      </div>
+                    </div>
+                    <div className="w-[54px]" />
+                  </div>
+                  <video
+                    src={assetPath(section.videoSrc || "")}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto block"
+                  />
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        );
+      }
+      return (
+        <section className="bg-[#1a1a1c]">
+          <div className="max-w-[1200px] mx-auto">
+            <Reveal>
+              <video
+                src={assetPath(section.videoSrc || "")}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto block"
+              />
             </Reveal>
           </div>
         </section>
