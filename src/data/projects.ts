@@ -47,15 +47,20 @@ export const PROJECTS: Project[] = [
     color: "#6366f1",
     featured: true,
     thumbnail: "/images/clarvos/Homepage-AI-Optimized-Agentic.png",
-    heroImage: "/images/clarvos/Homepage-AI-Optimized-Agentic.png",
+    heroImage: "/images/clarvos/Clarvos hero Image.png",
     heroObjectPosition: "top",
     meta: [
-      { label: "Client", value: "Clarvos (Cylitix)" },
+      { label: "Client", value: "Clarvos" },
       { label: "Role", value: "Lead Product Designer" },
       { label: "Duration", value: "2024 – Present" },
       { label: "Platform", value: "Web SaaS" },
     ],
     sections: [
+      {
+        type: "video",
+        videoSrc: "/images/clarvos/clarvos-core-flow.mp4",
+        videoLabel: "Clarvos — Full Flow",
+      },
       {
         type: "text",
         sectionNumber: "01",
@@ -1319,71 +1324,6 @@ export const PROJECTS: Project[] = [
         "Prototyping",
       ],
       collaborators: ["Founder"],
-      tools: ["Figma"],
-    },
-    nextProject: {
-      slug: "freely-tax",
-      title: "Freely.tax",
-      subtitle: "Tax Accounting Platform",
-    },
-  },
-  {
-    slug: "freely-tax",
-    title: "Freely.tax",
-    subtitle: "Tax Accounting Platform",
-    description:
-      "A tax accounting platform based in France, designed to simplify tax preparation and filing for individuals and businesses.",
-    tags: ["FinTech", "Tax", "SaaS", "Accounting"],
-    color: "#f59e0b",
-    meta: [
-      { label: "Client", value: "Freely.tax" },
-      { label: "Role", value: "Product Designer" },
-      { label: "Duration", value: "TBD" },
-      { label: "Platform", value: "Web" },
-    ],
-    sections: [
-      {
-        type: "text",
-        sectionNumber: "01",
-        sectionLabel: "Overview",
-        heading: "Making tax preparation simple and accessible",
-        body: [
-          "Freely.tax is a France-based tax accounting platform aimed at streamlining tax preparation and filing. The design challenge was to take inherently complex financial and regulatory workflows and make them approachable for a broad user base.",
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "02",
-        sectionLabel: "Discovery",
-        heading: "Understanding tax complexity across markets",
-        body: [
-          "Worked directly with the founder to map out the tax preparation journey, identify pain points in existing solutions, and define the core product experience that would differentiate Freely.tax in the market.",
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "03",
-        sectionLabel: "Design",
-        heading: "Designing the tax preparation experience",
-        body: [
-          "Placeholder — details on the filing flows, document upload experience, calculation interfaces, and dashboard design to be added.",
-        ],
-      },
-    ],
-    outcome: {
-      heading: "Simplifying tax for everyone",
-      body: [
-        "Placeholder — outcome details and metrics to be added.",
-      ],
-      contributions: [
-        "Product Design",
-        "UX Research",
-        "Interaction Design",
-        "Prototyping",
-      ],
-      collaborators: [
-        "Founder",
-      ],
       tools: ["Figma"],
     },
     nextProject: {
