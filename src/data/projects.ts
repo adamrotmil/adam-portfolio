@@ -1,5 +1,5 @@
 export interface ProjectSection {
-  type: "text" | "quote" | "stats" | "images" | "image-text";
+  type: "text" | "quote" | "stats" | "images" | "image-text" | "video";
   heading?: string;
   sectionNumber?: string;
   sectionLabel?: string;
@@ -9,6 +9,8 @@ export interface ProjectSection {
   images?: { label: string; dark?: boolean; height?: number; src?: string; objectPosition?: string }[];
   imagePosition?: "left" | "right";
   layout?: "phone-gallery" | "desktop-showcase" | "photo-grid";
+  videoSrc?: string;
+  videoLabel?: string;
 }
 
 export interface Project {
@@ -630,6 +632,11 @@ export const PROJECTS: Project[] = [
         ],
       },
       {
+        type: "video",
+        videoSrc: "/images/respond-ai/Email.mov",
+        videoLabel: "Email Interface — AI-assisted Carrier Communication",
+      },
+      {
         type: "images",
         layout: "phone-gallery",
         images: [
@@ -647,6 +654,11 @@ export const PROJECTS: Project[] = [
         body: [
           "In order to guide the responses and ensure quality, I designed a way for users to create templates using variables. These templates inform the mega-prompts and multi-shot prompting that ensures consistent, high-quality responses.",
         ],
+      },
+      {
+        type: "video",
+        videoSrc: "/images/respond-ai/Templates.mov",
+        videoLabel: "Template Builder — Variable-based Response Templates",
       },
       {
         type: "text",
@@ -832,6 +844,11 @@ export const PROJECTS: Project[] = [
             src: "/images/miami/miami-average-treatment-effect.png",
           },
         ],
+      },
+      {
+        type: "video",
+        videoSrc: "/images/miami/Reflect-Demo.mov",
+        videoLabel: "Reflect — Patient Video Check-in Demo",
       },
       {
         type: "text",
