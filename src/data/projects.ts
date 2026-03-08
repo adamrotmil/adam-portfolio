@@ -380,7 +380,7 @@ export const PROJECTS: Project[] = [
     tags: ["Mobile", "Conversational AI", "QR/Vision", "Field Service"],
     color: "#2d5a3d",
     thumbnail: "/images/gator/Gator cover.png",
-    heroImage: "/images/gator/Gator-Splash.png",
+    heroImage: "/images/gator/Gator First Image.png",
     meta: [
       { label: "Client", value: "Gator Tech Support" },
       { label: "Role", value: "UI Designer" },
