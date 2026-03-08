@@ -41,7 +41,19 @@ function CaseStudyCard({
             background: `linear-gradient(135deg, ${study.color}15, ${study.color}08)`,
           }}
         >
-          {study.thumbnail ? (
+          {study.thumbnailVideo ? (
+            <video
+              src={assetPath(study.thumbnailVideo)}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500"
+              style={{
+                transform: hovered ? "scale(1.03)" : "scale(1)",
+              }}
+            />
+          ) : study.thumbnail ? (
             <img
               src={assetPath(study.thumbnail)}
               alt={`${study.title} — ${study.subtitle}`}

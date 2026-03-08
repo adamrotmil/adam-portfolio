@@ -22,6 +22,7 @@ export interface Project {
   color: string;
   featured?: boolean;
   thumbnail?: string;
+  thumbnailVideo?: string;
   heroImage?: string;
   heroObjectPosition?: string;
   meta: { label: string; value: string }[];
@@ -47,6 +48,7 @@ export const PROJECTS: Project[] = [
     color: "#6366f1",
     featured: true,
     thumbnail: "/images/clarvos/Homepage-AI-Optimized-Agentic.png",
+    thumbnailVideo: "/images/clarvos/clarvos-core-flow.mp4",
     heroImage: "/images/clarvos/Clarvos hero Image.png",
     heroObjectPosition: "top",
     meta: [
@@ -322,36 +324,19 @@ export const PROJECTS: Project[] = [
       {
         type: "text",
         sectionNumber: "02",
-        sectionLabel: "Google — Gemini",
-        heading: "Evaluating Gemini Copilot for Google",
+        sectionLabel: "OpenAI — ChatGPT",
+        heading: "Contributing to the next version of ChatGPT",
         body: [
-          "Worked on evaluation tasks for Google’s Gemini Copilot, rating model outputs across multiple quality axes. The project involved assessing the model’s ability to follow complex instructions, provide grounded and factually accurate responses, and maintain safety guardrails.",
+          "Evaluated and rated outputs for a new version of ChatGPT, applying a rigorous multi-axis assessment framework. The work focused on improving the model’s conversational quality, factual reliability, and alignment with user intent.",
         ],
       },
       {
         type: "text",
         sectionNumber: "03",
-        sectionLabel: "OpenAI — ChatGPT",
-        heading: "Contributing to the next version of ChatGPT",
+        sectionLabel: "Additional Annotations",
+        heading: "Evaluation work for Google, Anthropic, and other frontier model providers",
         body: [
-          "Evaluated and rated outputs for a new version of ChatGPT, applying the same rigorous multi-axis assessment framework. The work focused on improving the model’s conversational quality, factual reliability, and alignment with user intent.",
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "04",
-        sectionLabel: "Masked Projects",
-        heading: "Additional work under code names",
-        body: [
-          "Some projects were masked under internal code names — common practice in frontier AI development. While the end client wasn’t always disclosed, the nature of the work (e.g., domain-specific queries about aerospace and space exploration) suggested connections to companies like SpaceX. Regardless of the client, the evaluation methodology remained consistent and rigorous.",
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "05",
-        sectionLabel: "Quality Assurance",
-        heading: "Reviewing other evaluators’ work",
-        body: [
+          "Worked on evaluation tasks for Google’s Gemini Copilot, rating model outputs across multiple quality axes. The project involved assessing the model’s ability to follow complex instructions, provide grounded and factually accurate responses, and maintain safety guardrails.",
           "Beyond direct evaluation, also served in a quality assurance capacity — reviewing other evaluators’ ratings for consistency, accuracy, and adherence to rubric standards. This meta-review role helped maintain the integrity of the training data pipeline.",
         ],
       },
