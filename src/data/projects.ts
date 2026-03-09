@@ -1336,69 +1336,263 @@ export const PROJECTS: Project[] = [
       tools: ["Figma"],
     },
     nextProject: {
-      slug: "goldman-sachs",
-      title: "Goldman Sachs",
-      subtitle: "Advisor Portfolio Migration Platform",
+      slug: "wild-brains",
+      title: "Wild Brains",
+      subtitle: "Brain Wearable & Optimization App",
     },
   },
   {
-    slug: "goldman-sachs",
-    title: "Goldman Sachs",
-    subtitle: "Advisor Portfolio Migration Platform",
+    slug: "wild-brains",
+    title: "Wild Brains",
+    subtitle: "Brain Wearable & Optimization App",
     description:
-      "An internal platform for financial advisors to execute portfolio migrations into tax loss harvesting strategies, run those strategies, track performance against projections, and rebalance fund holdings.",
-    tags: ["FinTech", "Enterprise", "Portfolio Management", "Tax Strategy"],
-    color: "#7c9eb2",
+      "A consumer brain wearable companion app that uses EEG biofeedback and behavioral tracking to help users optimize focus, creativity, and mental performance through personalized training programs.",
+    tags: ["Consumer Health", "Wearable", "Mobile", "Biofeedback"],
+    color: "#a855f7",
+    thumbnail: "/images/wb/new exports/Feed Option 1.png",
+    heroImage: "/images/wb/new exports/Introduction.png",
     meta: [
-      { label: "Client", value: "Goldman Sachs" },
+      { label: "Client", value: "Wild Brains" },
       { label: "Role", value: "Product Designer" },
-      { label: "Duration", value: "TBD" },
-      { label: "Platform", value: "Web (Internal)" },
+      { label: "Stage", value: "Seed Round" },
+      { label: "Platform", value: "iOS" },
     ],
     sections: [
       {
         type: "text",
         sectionNumber: "01",
         sectionLabel: "Overview",
-        heading: "Empowering advisors with intelligent portfolio tools",
+        heading:
+          "A wearable that reads your brain \u2014 and an app that trains it",
         body: [
-          "Designed an advisor-facing platform for Goldman Sachs that enabled financial advisors to migrate client portfolios into tax loss harvesting strategies. The platform supported strategy execution, performance tracking against projections, and rebalancing of funds and holdings.",
+          "Wild Brains is a direct-to-consumer brain optimization platform built around a lightweight EEG headband. The device measures neural activity in real time while the companion app translates that data into personalized training programs \u2014 creative exercises, focus sessions, and behavioral tracks designed to improve how users think, feel, and perform.",
+          "I joined as the sole product designer during the company\u2019s seed round, working directly with the founder and a small engineering team. The challenge was twofold: make neuroscience accessible to a mainstream consumer audience, and create an experience compelling enough to drive daily engagement with a novel device category.",
+        ],
+      },
+      {
+        type: "quote",
+        quote:
+          "The hardest part wasn\u2019t visualizing brain data \u2014 it was making people feel something when they saw it.",
+      },
+      {
+        type: "stats",
+        stats: [
+          { number: 33, suffix: "+", label: "Screens designed end-to-end" },
+          {
+            number: 4,
+            suffix: "",
+            label: "Brain metric dimensions tracked",
+          },
+          { number: 12, suffix: "+", label: "Personalization questions" },
+          { number: 1, suffix: "", label: "Seed round secured" },
         ],
       },
       {
         type: "text",
         sectionNumber: "02",
-        sectionLabel: "Migration",
-        heading: "Designing the portfolio migration experience",
+        sectionLabel: "Personalization",
+        heading: "An adaptive assessment that builds your brain profile",
         body: [
-          "Placeholder — details on the migration workflow, asset mapping, tax impact previews, and advisor decision-support tools to be added.",
+          "Before the headband even turns on, the app builds a behavioral and psychological profile through a carefully sequenced onboarding assessment. Questions move from binary choices to multi-select grids to analog sliders \u2014 each interaction type calibrated to the kind of data we need.",
+          "The assessment covers chronotype, personality dimensions, self-perception, goals, and activity preferences. This data seeds the recommendation engine that generates personalized training programs.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "phone-gallery",
+        images: [
+          {
+            src: "/images/wb/new exports/Initial assessment-4.png",
+            label: "Chronotype selection",
+          },
+          {
+            src: "/images/wb/new exports/Initial assessment-10.png",
+            label: "Self-description with selections",
+          },
+          {
+            src: "/images/wb/new exports/Initial assessment-9.png",
+            label: "Goal selection",
+          },
+          {
+            src: "/images/wb/new exports/Initial assessment-11.png",
+            label: "Activity preferences",
+          },
+        ],
+      },
+      {
+        type: "images",
+        layout: "phone-gallery",
+        images: [
+          {
+            src: "/images/wb/new exports/Guidance-1.png",
+            label: "Plan generation",
+          },
+          {
+            src: "/images/wb/new exports/Guidance-2.png",
+            label: "Goal confirmation",
+          },
+          {
+            src: "/images/wb/new exports/Guidance-3.png",
+            label: "Brain data preview",
+          },
         ],
       },
       {
         type: "text",
         sectionNumber: "03",
-        sectionLabel: "Strategy & Tracking",
-        heading: "Tax loss harvesting and performance monitoring",
+        sectionLabel: "Daily Experience",
+        heading: "A dashboard that makes brain data feel personal",
         body: [
-          "Placeholder — details on the strategy execution interface, performance dashboards, projection comparisons, and rebalancing tools to be added.",
+          "The home screen anchors the daily experience. It surfaces the user\u2019s active training track, today\u2019s brain insight score, and a weekly progress summary \u2014 all without overwhelming a consumer audience with raw neuroscience data.",
+          "We designed two states: the daily view with current session and brain insights, and the weekly retrospective showing confidence trends and cumulative focus time. Both encourage return visits and reinforce progress.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "phone-gallery",
+        images: [
+          {
+            src: "/images/wb/new exports/Home.png",
+            label: "Daily dashboard",
+          },
+          {
+            src: "/images/wb/new exports/Home-1.png",
+            label: "Weekly review",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "04",
+        sectionLabel: "Training Programs",
+        heading:
+          "Structured brain workouts, delivered as 2-week programs",
+        body: [
+          "Training programs are the core engagement loop. Each program is a structured 2-week curriculum of daily activities \u2014 creative exercises, focus challenges, and mindfulness sessions \u2014 all calibrated to the user\u2019s brain profile and goals.",
+          "The detail view breaks each day into specific activities with clear time commitments and difficulty indicators. This structure borrows from fitness app conventions to make brain training feel familiar and achievable.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "phone-gallery",
+        images: [
+          {
+            src: "/images/wb/new exports/Workout Plan Detail.png",
+            label: "Program overview",
+          },
+          {
+            src: "/images/wb/new exports/Workout Plan Detail-1.png",
+            label: "Daily activity detail",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "05",
+        sectionLabel: "Live Activities",
+        heading:
+          "Real-time brain monitoring during creative exercises",
+        body: [
+          "The headband captures EEG data while users complete creative activities \u2014 drawing, writing, problem-solving. The app guides each session with clear instructions and a progress timer, while the device quietly records neural patterns in the background.",
+          "After each activity, the app reveals what the brain was doing during the exercise \u2014 creating a feedback loop between conscious effort and measurable neural response.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "phone-gallery",
+        images: [
+          {
+            src: "/images/wb/new exports/Video.png",
+            label: "Drawing activity \u2014 instructions",
+          },
+          {
+            src: "/images/wb/new exports/Video-1.png",
+            label: "Drawing activity \u2014 in progress",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "06",
+        sectionLabel: "Brain Visualization",
+        heading:
+          "Turning neural signals into something you can understand",
+        body: [
+          "This was the core design challenge: how do you make EEG data legible to someone who isn\u2019t a neuroscientist? We explored multiple visualization approaches \u2014 from radar charts mapping four cognitive dimensions, to 3D brain renderings with activity hotspots, to simple bar breakdowns.",
+          "Each approach served a different context. The radar chart works for at-a-glance brain profiles, the 3D rendering creates an emotional connection to the data, and the bar charts support comparison across sessions and time periods.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "phone-gallery",
+        images: [
+          {
+            src: "/images/wb/new exports/Aggregate data-1.png",
+            label: "3D brain activity map",
+          },
+          {
+            src: "/images/wb/new exports/Aggregate data-2.png",
+            label: "Post-activity brain analysis",
+          },
+          {
+            src: "/images/wb/new exports/Aggregate data.png",
+            label: "Session benchmark score",
+          },
+        ],
+      },
+      {
+        type: "images",
+        layout: "phone-gallery",
+        images: [
+          {
+            src: "/images/wb/new exports/Feed Option 1.png",
+            label: "Radar chart visualization",
+          },
+          {
+            src: "/images/wb/new exports/Feed Option 2.png",
+            label: "Radar with brain insight panel",
+          },
+          {
+            src: "/images/wb/new exports/Feed Option 3.png",
+            label: "3D brain with metric breakdown",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "07",
+        sectionLabel: "Progress",
+        heading:
+          "Tracking the long game across multiple cognitive dimensions",
+        body: [
+          "The progress view maps the user\u2019s journey across four brain dimensions \u2014 Focus, Creativity, Anxiety, and Sleep \u2014 showing how each evolves over time through sustained training. It transforms abstract cognitive improvement into a visible trajectory.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "phone-gallery",
+        images: [
+          {
+            src: "/images/wb/new exports/User Progress.png",
+            label: "Multi-dimension progress tracking",
+          },
         ],
       },
     ],
     outcome: {
-      heading: "Streamlining portfolio management at scale",
+      heading: "From prototype to funded product",
       body: [
-        "Placeholder — outcome details and metrics to be added.",
+        "The design work I delivered became the foundation of Wild Brains\u2019 product vision during their seed round. The comprehensive screen designs, data visualization system, and personalization framework demonstrated a clear, compelling product experience that helped the company secure continued investment and the opportunity to scale.",
+        "By borrowing engagement patterns from fitness and wellness apps, we made brain training feel approachable. By investing in data visualization, we made the science feel real. The combination gave investors confidence that this wasn\u2019t just a device \u2014 it was a daily habit.",
       ],
       contributions: [
         "Product Design",
         "UX Research",
+        "Data Visualization",
         "Interaction Design",
-        "Prototyping",
       ],
-      collaborators: [
-        "TBD",
-      ],
-      tools: ["TBD"],
+      collaborators: ["Founder", "Engineering Team"],
+      tools: ["Figma"],
     },
     nextProject: {
       slug: "vulcan",

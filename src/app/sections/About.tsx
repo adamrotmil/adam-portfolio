@@ -70,13 +70,24 @@ export default function About() {
               <p className="font-sans text-xs text-text-muted uppercase tracking-[0.08em] mb-4">
                 Teaching
               </p>
+              <img
+                src={assetPath("/images/about/mica_logo-1024x682.jpg")}
+                alt="MICA — Maryland Institute College of Art"
+                className="h-[56px] rounded-[4px] mb-4"
+                style={{ objectFit: "cover", objectPosition: "center 42%", width: "160px" }}
+              />
               <div>
                 <span className="font-sans text-[0.92rem] text-text-primary">
                   {TEACHING.role}
                 </span>
-                <span className="font-sans text-[0.85rem] text-text-muted ml-2">
+                <a
+                  href="https://www.mica.edu/academics/graduate-programs/ux-design-mps/adam-rotmil/"
+                  target="_blank"
+                  rel="noopener"
+                  className="font-sans text-[0.85rem] text-text-muted ml-2 underline decoration-border hover:text-text-primary transition-colors"
+                >
                   {TEACHING.institution}
-                </span>
+                </a>
                 <span className="font-sans text-[0.78rem] text-text-muted hidden sm:inline ml-2">
                   · {TEACHING.period}
                 </span>
