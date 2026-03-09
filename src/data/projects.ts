@@ -319,6 +319,12 @@ export const PROJECTS: Project[] = [
             src: "/images/prompt-evals/prompt evals.png",
             label: "Multi-turn evaluation interface — conversation rating workflow",
           },
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
           {
             src: "/images/prompt-evals/prompt-kernel.png",
             label: "Multi-axis response rating — instruction following, completeness, factuality",
@@ -363,6 +369,120 @@ export const PROJECTS: Project[] = [
         "OpenAI",
       ],
       tools: ["DataAnnotation Platform", "Custom Evaluation Tools"],
+    },
+    nextProject: {
+      slug: "vulcan",
+      title: "Vulcan",
+      subtitle: "DoD Innovation Platform",
+    },
+  },
+  {
+    slug: "vulcan",
+    title: "Vulcan",
+    subtitle: "DoD Innovation Platform",
+    description:
+      "An innovation management platform where government agencies issue calls for entries and commercial-sector innovators submit proposals and technical demos. Part of the deep tech pipeline modernizing how SOCOM conducts BAAs and acquires new capabilities.",
+    tags: ["Defense", "GovTech", "Innovation", "Enterprise"],
+    color: "#475569",
+    thumbnail: "/images/vulcan/vulcan.png",
+    heroImage: "/images/vulcan/vulcan.png",
+    heroObjectPosition: "top",
+    meta: [
+      { label: "Client", value: "Cylitix / DoD (SOCOM)" },
+      { label: "Role", value: "Product Designer" },
+      { label: "Duration", value: "TBD" },
+      { label: "Platform", value: "Web" },
+    ],
+    sections: [
+      {
+        type: "text",
+        sectionNumber: "01",
+        sectionLabel: "Overview",
+        heading: "Modernizing how the Department of Defense discovers innovation",
+        body: [
+          "Vulcan is an innovation platform built for Cylitix with sponsorship from the Department of Defense. It modernizes the Broad Agency Announcement (BAA) process — how agencies like SOCOM issue calls for capabilities and how commercial-sector innovators respond with proposals and technical demonstrations.",
+          "The platform sits at the center of the deep tech pipeline, connecting government needs with commercial innovation in a structured, searchable, and evaluable way.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "02",
+        sectionLabel: "Call Authoring",
+        heading: "Building structured calls for innovation",
+        body: [
+          "Government program managers create calls through a multi-step authoring flow. The form builder supports conditional logic, branching, and custom question types — from technical focus areas to cost estimates and milestone timelines. Skip logic lets authors create adaptive submission forms that route innovators through relevant sections based on their domain.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
+          {
+            src: "/images/vulcan/form-skip-logic.png",
+            label: "Form builder with conditional skip logic",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "03",
+        sectionLabel: "Question Types",
+        heading: "Flexible data collection for complex submissions",
+        body: [
+          "The platform supports a range of question types tailored to defense innovation evaluation — from ROM cost estimates and milestone timelines to technical capability assessments. Each question type is configurable with validation rules, optional fields, and rich text context.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
+          {
+            src: "/images/vulcan/8.png",
+            label: "ROM Cost Estimate question type",
+          },
+          {
+            src: "/images/vulcan/11.png",
+            label: "Milestone timeline configuration",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "04",
+        sectionLabel: "Access Controls",
+        heading: "Managing collaboration across agencies",
+        body: [
+          "Calls involve multiple stakeholders across different government organizations. The access control system lets program managers invite editors, set visibility permissions, and manage who can view and modify call details — supporting the complex organizational dynamics of defense procurement.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
+          {
+            src: "/images/vulcan/Add an Editor and Set Visibility.png",
+            label: "Editor management and visibility controls",
+          },
+        ],
+      },
+      {
+        type: "quote",
+        quote: "Note: project content is illustrative.",
+      },
+    ],
+    outcome: {
+      heading: "Enabling the deep tech pipeline",
+      body: [
+        "The platform supports SOCOM’s modernized approach to capability acquisition, streamlining the path from government need to commercial innovation through structured authoring, evaluation, and collaboration tools.",
+      ],
+      contributions: [
+        "Product Design",
+        "Search UX",
+        "Information Architecture",
+        "Design System",
+      ],
+      collaborators: ["Cylitix Team", "DoD Stakeholders"],
+      tools: ["Figma"],
     },
     nextProject: {
       slug: "gator",
@@ -526,7 +646,7 @@ export const PROJECTS: Project[] = [
     nextProject: {
       slug: "respond-ai",
       title: "Respond AI",
-      subtitle: "LLM for Logistics",
+      subtitle: "Supply-Chain Logistics with LLM",
     },
   },
   {
@@ -700,8 +820,8 @@ export const PROJECTS: Project[] = [
     },
     nextProject: {
       slug: "astrazeneca",
-      title: "AstraZeneca Care",
-      subtitle: "Digital Health Platform",
+      title: "AstraZeneca",
+      subtitle: "Clinical Trial Platform",
     },
   },
   {
@@ -810,8 +930,8 @@ export const PROJECTS: Project[] = [
     },
     nextProject: {
       slug: "miami",
-      title: "University of Miami",
-      subtitle: "Health Research App",
+      title: "Miami",
+      subtitle: "Clinical Dashboard",
     },
   },
   {
@@ -998,7 +1118,7 @@ export const PROJECTS: Project[] = [
     nextProject: {
       slug: "content-studio",
       title: "Content Studio",
-      subtitle: "Cyber Security Training",
+      subtitle: "Enterprise Content Platform",
     },
   },
   {
@@ -1092,252 +1212,6 @@ export const PROJECTS: Project[] = [
         "Training Specialists",
       ],
       tools: ["Figma", "FigJam", "Miro"],
-    },
-    nextProject: {
-      slug: "t-rowe-price",
-      title: "T. Rowe Price",
-      subtitle: "401(k) Platform",
-    },
-  },
-  {
-    slug: "t-rowe-price",
-    title: "T. Rowe Price",
-    subtitle: "Retail Investment 401(k) Platform",
-    description:
-      "Creating a self-service platform that empowered retail investors to manage their 401(k) accounts with guidance, reducing support calls by 40%.",
-    tags: ["Finance", "Enterprise", "Design Leadership"],
-    color: "#0891b2",
-    thumbnail: "/images/trowe-price/Landing-page-401k-overview.jpg",
-    heroImage: "/images/trowe-price/Landing-page-401k-overview.jpg",
-    meta: [
-      { label: "Client", value: "T. Rowe Price" },
-      { label: "Role", value: "Senior Manager, UX Design Lead" },
-      { label: "Scope", value: "Product Design & Strategy" },
-      { label: "Platform", value: "Web & Mobile" },
-    ],
-    sections: [
-      {
-        type: "text",
-        sectionNumber: "01",
-        sectionLabel: "Overview",
-        heading:
-          "Empowering retail investors to manage their 401(k) with confidence.",
-        body: [
-          "T. Rowe Price’s 401(k) service for retail investors relied heavily on support calls for account management, including distributions. Investors often felt guilty or discouraged when making withdrawals, and the process lacked financial wellness support.",
-          "The goal was to create a self-service platform that empowered investors to manage their 401(k) accounts while providing guidance and support to minimize the negative impact of withdrawals.",
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "02",
-        sectionLabel: "Design Sprint",
-        heading: "A two-day product design workshop bringing together customers and stakeholders",
-        body: [
-          "I led a comprehensive two-day product design workshop, based on a modified form of the Google Ventures design sprint. We co-created with a diverse range of customers, designers, engineers, stakeholders, SMEs, and product managers.",
-          "Teams mapped the end-to-end investor journey — from evaluating options through finalizing a withdrawal — using Jobs-to-be-Done frameworks to uncover the functional, emotional, and social dimensions of each decision point.",
-        ],
-      },
-      {
-        type: "images",
-        layout: "photo-grid",
-        images: [
-          {
-            label: "Design Sprint — Journey Mapping & Jobs-to-be-Done Workshop",
-            src: "/images/trowe-price/Workshop-UXR.jpg",
-          },
-          {
-            label: "Collaborative Workshop — Team Mapping Session",
-            src: "/images/trowe-price/workshop-yellow-1.jpeg",
-          },
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "03",
-        sectionLabel: "Prototyping",
-        heading: "Educational content and tools to understand the impact of withdrawals",
-        body: [
-          "Key concepts included a self-service platform for managing 401(k) accounts including distributions, educational content and tools to help investors understand the impact of withdrawals and explore alternatives, personalized financial wellness support and goal-setting features, and emotionally supportive language and design elements.",
-        ],
-      },
-      {
-        type: "images",
-        layout: "desktop-showcase",
-        images: [
-          {
-            label: "401(k) Platform — Account Overview & Withdrawal Options",
-            src: "/images/trowe-price/Landing-page-401k-overview.jpg",
-          },
-        ],
-      },
-      {
-        type: "stats",
-        stats: [
-          {
-            number: 40,
-            suffix: "%",
-            label: "Reduction in support calls related to distributions",
-          },
-          {
-            number: 30,
-            suffix: "%",
-            label: "Increase in investor engagement with educational content",
-          },
-          {
-            number: 20,
-            suffix: "%",
-            label: "Reduction in average amount withdrawn per distribution",
-          },
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "04",
-        sectionLabel: "Iterative Testing",
-        heading: "Discovering and fixing discoverability issues in real time",
-        body: [
-          "Regular tests were run to confirm or falsify hypotheses under consideration. In one instance, the team realized that users may not even have known where to look for the starting point of the flow.",
-          "Based on that learning, they quickly pivoted to address discoverability issues, restructured some of the IA on the sitewide nav, and changed terminology to be less jargon-laden — such as changing ‘take a distribution’ to ‘take a withdrawal.’",
-        ],
-      },
-      {
-        type: "images",
-        layout: "desktop-showcase",
-        images: [
-          {
-            label: "Usability Testing — Task Success Rates & Navigation Analysis",
-            src: "/images/trowe-price/03-Testing-UXR.png",
-          },
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "05",
-        sectionLabel: "Design System",
-        heading:
-          "Contributing to the company-wide enterprise design system",
-        body: [
-          "Because I served as both a UX design lead and a Senior Manager, I played an active role in contributing to the company-wide enterprise design system. My team met with several of the other design chapters across the innovation lab on a weekly basis, coordinating to ensure that every innovation could benefit the whole group.",
-        ],
-      },
-    ],
-    outcome: {
-      heading: "Measurable business impact",
-      body: [
-        "The 401(k) self-service platform and financial wellness support features were launched to retail investors, resulting in a 40% reduction in support calls, 30% increase in educational engagement, and 20% reduction in withdrawal amounts. The project demonstrated that empathetic, well-researched design can directly improve both business metrics and human outcomes.",
-      ],
-      contributions: [
-        "UX Design Lead",
-        "Design Sprint Facilitation",
-        "User Research",
-        "Design System",
-        "Product Strategy",
-      ],
-      collaborators: [
-        "Product Managers",
-        "Engineers",
-        "Customer Support",
-        "Subject Matter Experts",
-      ],
-      tools: ["Sketch", "InVision", "Miro", "Jira"],
-    },
-    nextProject: {
-      slug: "collab-match",
-      title: "CollabMatch",
-      subtitle: "Doctor–Pharmacist Collaboration Platform",
-    },
-  },
-  {
-    slug: "collab-match",
-    title: "CollabMatch",
-    subtitle: "Doctor–Pharmacist Collaboration Platform",
-    description:
-      "A platform that matches doctors and pharmacists to facilitate collaboration, improving patient outcomes through better coordination between prescribers and dispensers.",
-    tags: ["Healthcare", "Platform", "Matching", "Collaboration"],
-    color: "#0ea5e9",
-    thumbnail: "/images/collabmatch/Collab Match Cover.png",
-    heroImage: "/images/collabmatch/collab-match-illustrative.png",
-    meta: [
-      { label: "Client", value: "CollabMatch (Startup)" },
-      { label: "Role", value: "Product Designer" },
-      { label: "Duration", value: "TBD" },
-      { label: "Platform", value: "Web + Mobile" },
-    ],
-    sections: [
-      {
-        type: "text",
-        sectionNumber: "01",
-        sectionLabel: "Overview",
-        heading: "Connecting doctors and pharmacists for better patient care",
-        body: [
-          "CollabMatch is a platform designed to bridge the gap between doctors and pharmacists, enabling them to find and collaborate with each other more effectively. The goal was to improve patient outcomes by making it easier for prescribers and dispensers to coordinate on treatment plans.",
-          "Worked directly with the founder to understand the problem space — the lack of structured communication channels between doctors and pharmacists leads to medication errors, missed interactions, and suboptimal patient care. The platform needed to make matching intuitive and collaboration frictionless.",
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "02",
-        sectionLabel: "Profile & Discovery",
-        heading: "Making the right match",
-        body: [
-          "The core of the platform is a provider profile system — practitioners create detailed profiles with their collaboration preferences, specialties, location, and credentials. A review and rating system helps build trust between potential collaborators. The search and discovery experience lets providers filter by field of practice, location, and availability to find the right match.",
-        ],
-      },
-      {
-        type: "images",
-        layout: "desktop-showcase",
-        images: [
-          {
-            src: "/images/collabmatch/View Profile-desktop.png",
-            label: "Provider profile with reviews and active connections",
-          },
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "03",
-        sectionLabel: "Messaging",
-        heading: "From discovery to collaboration",
-        body: [
-          "Once matched, providers communicate through a built-in messaging system. The mobile-first messaging experience supports the real-world workflow — physicians and pharmacists coordinating on the go between appointments and consultations. Connection slots and a freemium upgrade path drive the business model.",
-        ],
-      },
-      {
-        type: "images",
-        layout: "phone-gallery",
-        images: [
-          {
-            src: "/images/collabmatch/Messages-mobile-2.png",
-            label: "Search Physicians",
-          },
-          {
-            src: "/images/collabmatch/Profile-mobile.png",
-            label: "Provider profile",
-          },
-          {
-            src: "/images/collabmatch/Messages-mobile.png",
-            label: "Messages inbox",
-          },
-          {
-            src: "/images/collabmatch/Chat-mobile.png",
-            label: "Chat thread",
-          },
-        ],
-      },
-    ],
-    outcome: {
-      heading: "Enabling healthcare collaboration",
-      body: [
-        "Designed the end-to-end experience from profile creation to active collaboration, working directly with the founder to validate the matching model and messaging flows with practicing healthcare professionals.",
-      ],
-      contributions: [
-        "Product Design",
-        "UX Research",
-        "Interaction Design",
-        "Prototyping",
-      ],
-      collaborators: ["Founder"],
-      tools: ["Figma"],
     },
     nextProject: {
       slug: "wild-brains",
@@ -1602,46 +1476,45 @@ export const PROJECTS: Project[] = [
       tools: ["Figma"],
     },
     nextProject: {
-      slug: "vulcan",
-      title: "Vulcan",
-      subtitle: "DoD Innovation Platform",
+      slug: "collab-match",
+      title: "CollabMatch",
+      subtitle: "Collaborative Matching Platform",
     },
   },
   {
-    slug: "vulcan",
-    title: "Vulcan",
-    subtitle: "DoD Innovation Platform",
+    slug: "collab-match",
+    title: "CollabMatch",
+    subtitle: "Doctor–Pharmacist Collaboration Platform",
     description:
-      "An innovation management platform where government agencies issue calls for entries and commercial-sector innovators submit proposals and technical demos. Part of the deep tech pipeline modernizing how SOCOM conducts BAAs and acquires new capabilities.",
-    tags: ["Defense", "GovTech", "Innovation", "Enterprise"],
-    color: "#475569",
-    thumbnail: "/images/vulcan/vulcan.png",
-    heroImage: "/images/vulcan/vulcan.png",
-    heroObjectPosition: "top",
+      "A platform that matches doctors and pharmacists to facilitate collaboration, improving patient outcomes through better coordination between prescribers and dispensers.",
+    tags: ["Healthcare", "Platform", "Matching", "Collaboration"],
+    color: "#0ea5e9",
+    thumbnail: "/images/collabmatch/Collab Match Cover.png",
+    heroImage: "/images/collabmatch/collab-match-illustrative.png",
     meta: [
-      { label: "Client", value: "Cylitix / DoD (SOCOM)" },
+      { label: "Client", value: "CollabMatch (Startup)" },
       { label: "Role", value: "Product Designer" },
       { label: "Duration", value: "TBD" },
-      { label: "Platform", value: "Web" },
+      { label: "Platform", value: "Web + Mobile" },
     ],
     sections: [
       {
         type: "text",
         sectionNumber: "01",
         sectionLabel: "Overview",
-        heading: "Modernizing how the Department of Defense discovers innovation",
+        heading: "Connecting doctors and pharmacists for better patient care",
         body: [
-          "Vulcan is an innovation platform built for Cylitix with sponsorship from the Department of Defense. It modernizes the Broad Agency Announcement (BAA) process — how agencies like SOCOM issue calls for capabilities and how commercial-sector innovators respond with proposals and technical demonstrations.",
-          "The platform sits at the center of the deep tech pipeline, connecting government needs with commercial innovation in a structured, searchable, and evaluable way.",
+          "CollabMatch is a platform designed to bridge the gap between doctors and pharmacists, enabling them to find and collaborate with each other more effectively. The goal was to improve patient outcomes by making it easier for prescribers and dispensers to coordinate on treatment plans.",
+          "Worked directly with the founder to understand the problem space — the lack of structured communication channels between doctors and pharmacists leads to medication errors, missed interactions, and suboptimal patient care. The platform needed to make matching intuitive and collaboration frictionless.",
         ],
       },
       {
         type: "text",
         sectionNumber: "02",
-        sectionLabel: "Call Authoring",
-        heading: "Building structured calls for innovation",
+        sectionLabel: "Profile & Discovery",
+        heading: "Making the right match",
         body: [
-          "Government program managers create calls through a multi-step authoring flow. The form builder supports conditional logic, branching, and custom question types — from technical focus areas to cost estimates and milestone timelines. Skip logic lets authors create adaptive submission forms that route innovators through relevant sections based on their domain.",
+          "The core of the platform is a provider profile system — practitioners create detailed profiles with their collaboration preferences, specialties, location, and credentials. A review and rating system helps build trust between potential collaborators. The search and discovery experience lets providers filter by field of practice, location, and availability to find the right match.",
         ],
       },
       {
@@ -1649,70 +1522,55 @@ export const PROJECTS: Project[] = [
         layout: "desktop-showcase",
         images: [
           {
-            src: "/images/vulcan/form-skip-logic.png",
-            label: "Form builder with conditional skip logic",
+            src: "/images/collabmatch/View Profile-desktop.png",
+            label: "Provider profile with reviews and active connections",
           },
         ],
       },
       {
         type: "text",
         sectionNumber: "03",
-        sectionLabel: "Question Types",
-        heading: "Flexible data collection for complex submissions",
+        sectionLabel: "Messaging",
+        heading: "From discovery to collaboration",
         body: [
-          "The platform supports a range of question types tailored to defense innovation evaluation — from ROM cost estimates and milestone timelines to technical capability assessments. Each question type is configurable with validation rules, optional fields, and rich text context.",
+          "Once matched, providers communicate through a built-in messaging system. The mobile-first messaging experience supports the real-world workflow — physicians and pharmacists coordinating on the go between appointments and consultations. Connection slots and a freemium upgrade path drive the business model.",
         ],
       },
       {
         type: "images",
-        layout: "desktop-showcase",
+        layout: "phone-gallery",
         images: [
           {
-            src: "/images/vulcan/8.png",
-            label: "ROM Cost Estimate question type",
+            src: "/images/collabmatch/Messages-mobile-2.png",
+            label: "Search Physicians",
           },
           {
-            src: "/images/vulcan/11.png",
-            label: "Milestone timeline configuration",
+            src: "/images/collabmatch/Profile-mobile.png",
+            label: "Provider profile",
           },
-        ],
-      },
-      {
-        type: "text",
-        sectionNumber: "04",
-        sectionLabel: "Access Controls",
-        heading: "Managing collaboration across agencies",
-        body: [
-          "Calls involve multiple stakeholders across different government organizations. The access control system lets program managers invite editors, set visibility permissions, and manage who can view and modify call details — supporting the complex organizational dynamics of defense procurement.",
-        ],
-      },
-      {
-        type: "images",
-        layout: "desktop-showcase",
-        images: [
           {
-            src: "/images/vulcan/Add an Editor and Set Visibility.png",
-            label: "Editor management and visibility controls",
+            src: "/images/collabmatch/Messages-mobile.png",
+            label: "Messages inbox",
+          },
+          {
+            src: "/images/collabmatch/Chat-mobile.png",
+            label: "Chat thread",
           },
         ],
-      },
-      {
-        type: "quote",
-        quote: "Note: project content is illustrative.",
       },
     ],
     outcome: {
-      heading: "Enabling the deep tech pipeline",
+      heading: "Enabling healthcare collaboration",
       body: [
-        "The platform supports SOCOM’s modernized approach to capability acquisition, streamlining the path from government need to commercial innovation through structured authoring, evaluation, and collaboration tools.",
+        "Designed the end-to-end experience from profile creation to active collaboration, working directly with the founder to validate the matching model and messaging flows with practicing healthcare professionals.",
       ],
       contributions: [
         "Product Design",
-        "Search UX",
-        "Information Architecture",
-        "Design System",
+        "UX Research",
+        "Interaction Design",
+        "Prototyping",
       ],
-      collaborators: ["Cylitix Team", "DoD Stakeholders"],
+      collaborators: ["Founder"],
       tools: ["Figma"],
     },
     nextProject: {
@@ -1888,6 +1746,154 @@ export const PROJECTS: Project[] = [
         "1 Business Designer",
       ],
       tools: ["Figma", "Prototyping"],
+    },
+    nextProject: {
+      slug: "t-rowe-price",
+      title: "T. Rowe Price",
+      subtitle: "Retirement Investment Platform",
+    },
+  },
+  {
+    slug: "t-rowe-price",
+    title: "T. Rowe Price",
+    subtitle: "Retail Investment 401(k) Platform",
+    description:
+      "Creating a self-service platform that empowered retail investors to manage their 401(k) accounts with guidance, reducing support calls by 40%.",
+    tags: ["Finance", "Enterprise", "Design Leadership"],
+    color: "#0891b2",
+    thumbnail: "/images/trowe-price/Landing-page-401k-overview.jpg",
+    heroImage: "/images/trowe-price/Landing-page-401k-overview.jpg",
+    meta: [
+      { label: "Client", value: "T. Rowe Price" },
+      { label: "Role", value: "Senior Manager, UX Design Lead" },
+      { label: "Scope", value: "Product Design & Strategy" },
+      { label: "Platform", value: "Web & Mobile" },
+    ],
+    sections: [
+      {
+        type: "text",
+        sectionNumber: "01",
+        sectionLabel: "Overview",
+        heading:
+          "Empowering retail investors to manage their 401(k) with confidence.",
+        body: [
+          "T. Rowe Price’s 401(k) service for retail investors relied heavily on support calls for account management, including distributions. Investors often felt guilty or discouraged when making withdrawals, and the process lacked financial wellness support.",
+          "The goal was to create a self-service platform that empowered investors to manage their 401(k) accounts while providing guidance and support to minimize the negative impact of withdrawals.",
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "02",
+        sectionLabel: "Design Sprint",
+        heading: "A two-day product design workshop bringing together customers and stakeholders",
+        body: [
+          "I led a comprehensive two-day product design workshop, based on a modified form of the Google Ventures design sprint. We co-created with a diverse range of customers, designers, engineers, stakeholders, SMEs, and product managers.",
+          "Teams mapped the end-to-end investor journey — from evaluating options through finalizing a withdrawal — using Jobs-to-be-Done frameworks to uncover the functional, emotional, and social dimensions of each decision point.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "photo-grid",
+        images: [
+          {
+            label: "Design Sprint — Journey Mapping & Jobs-to-be-Done Workshop",
+            src: "/images/trowe-price/Workshop-UXR.jpg",
+          },
+          {
+            label: "Collaborative Workshop — Team Mapping Session",
+            src: "/images/trowe-price/workshop-yellow-1.jpeg",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "03",
+        sectionLabel: "Prototyping",
+        heading: "Educational content and tools to understand the impact of withdrawals",
+        body: [
+          "Key concepts included a self-service platform for managing 401(k) accounts including distributions, educational content and tools to help investors understand the impact of withdrawals and explore alternatives, personalized financial wellness support and goal-setting features, and emotionally supportive language and design elements.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
+          {
+            label: "401(k) Platform — Account Overview & Withdrawal Options",
+            src: "/images/trowe-price/Landing-page-401k-overview.jpg",
+          },
+        ],
+      },
+      {
+        type: "stats",
+        stats: [
+          {
+            number: 40,
+            suffix: "%",
+            label: "Reduction in support calls related to distributions",
+          },
+          {
+            number: 30,
+            suffix: "%",
+            label: "Increase in investor engagement with educational content",
+          },
+          {
+            number: 20,
+            suffix: "%",
+            label: "Reduction in average amount withdrawn per distribution",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "04",
+        sectionLabel: "Iterative Testing",
+        heading: "Discovering and fixing discoverability issues in real time",
+        body: [
+          "Regular tests were run to confirm or falsify hypotheses under consideration. In one instance, the team realized that users may not even have known where to look for the starting point of the flow.",
+          "Based on that learning, they quickly pivoted to address discoverability issues, restructured some of the IA on the sitewide nav, and changed terminology to be less jargon-laden — such as changing ‘take a distribution’ to ‘take a withdrawal.’",
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
+          {
+            label: "Usability Testing — Task Success Rates & Navigation Analysis",
+            src: "/images/trowe-price/03-Testing-UXR.png",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "05",
+        sectionLabel: "Design System",
+        heading:
+          "Contributing to the company-wide enterprise design system",
+        body: [
+          "Because I served as both a UX design lead and a Senior Manager, I played an active role in contributing to the company-wide enterprise design system. My team met with several of the other design chapters across the innovation lab on a weekly basis, coordinating to ensure that every innovation could benefit the whole group.",
+        ],
+      },
+    ],
+    outcome: {
+      heading: "Measurable business impact",
+      body: [
+        "The 401(k) self-service platform and financial wellness support features were launched to retail investors, resulting in a 40% reduction in support calls, 30% increase in educational engagement, and 20% reduction in withdrawal amounts. The project demonstrated that empathetic, well-researched design can directly improve both business metrics and human outcomes.",
+      ],
+      contributions: [
+        "UX Design Lead",
+        "Design Sprint Facilitation",
+        "User Research",
+        "Design System",
+        "Product Strategy",
+      ],
+      collaborators: [
+        "Product Managers",
+        "Engineers",
+        "Customer Support",
+        "Subject Matter Experts",
+      ],
+      tools: ["Sketch", "InVision", "Miro", "Jira"],
     },
     nextProject: {
       slug: "clarvos",
