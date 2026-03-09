@@ -571,12 +571,18 @@ export const PROJECTS: Project[] = [
           "Human-in-the-loop isn’t a compromise — it’s a feature. Operators stay in control while the AI handles the heavy lifting.",
       },
       {
+        type: "video",
+        layout: "desktop-showcase",
+        videoSrc: "/images/respond-ai/Email.mov",
+        videoLabel: "Email Interface — AI-assisted Carrier Communication",
+      },
+      {
         type: "text",
         sectionNumber: "03",
         sectionLabel: "Command Center",
-        heading: "A central dashboard that helps operators get oriented for the day’s work",
+        heading: "A central dashboard that helps operators get oriented for the day\u2019s work",
         body: [
-          "Initial product and market research helped shape the MVP vision, where users have a central dashboard that helps them get oriented for the day’s work. From this view, they can focus on high-priority actions, track email and message volumes, and monitor response quality scores.",
+          "Each operator begins their day with a prioritized action list, real-time message and email queues, and a quality score tracking AI response accuracy. The command center surfaces what matters most so operators can focus on high-value conversations.",
         ],
       },
       {
@@ -584,18 +590,37 @@ export const PROJECTS: Project[] = [
         layout: "desktop-showcase",
         images: [
           {
-            label: "Respond AI — Operator Dashboard",
-            src: "/images/respond-ai/respond-home.png",
+            label: "Respond AI — Operator Command Center",
+            src: "/images/respond-ai/Refined Navigation Home.png",
           },
         ],
       },
       {
         type: "text",
         sectionNumber: "04",
+        sectionLabel: "Reporting",
+        heading: "Measuring progress against daily and quarterly goals",
+        body: [
+          "The reporting dashboard gives team leads visibility into emails per day, response times, and quote volumes across teams. Operators set daily goals and track trends over time, creating a feedback loop that drives continuous improvement.",
+        ],
+      },
+      {
+        type: "images",
+        layout: "desktop-showcase",
+        images: [
+          {
+            label: "Respond AI — Reporting Dashboard",
+            src: "/images/respond-ai/reporting.png",
+          },
+        ],
+      },
+      {
+        type: "text",
+        sectionNumber: "05",
         sectionLabel: "Messaging",
         heading: "AI pre-drafts responses so operators can review, edit, and send",
         body: [
-          "The messaging interface gives operators a queue of driver conversations on the left and a threaded view on the right. The LLM pre-drafts each response using real-time data — operators simply review, make edits if needed, and accept. This same pattern extends to mobile follow-ups, where drivers get quick, contextual answers on the road.",
+          "The messaging interface gives operators a queue of driver conversations on the left and a threaded view on the right. The LLM pre-drafts each response using real-time data \u2014 operators simply review, make edits if needed, and accept. This same pattern extends to mobile follow-ups, where drivers get quick, contextual answers on the road.",
         ],
       },
       {
@@ -607,12 +632,6 @@ export const PROJECTS: Project[] = [
             src: "/images/respond-ai/respond-messaging-2x.png",
           },
         ],
-      },
-      {
-        type: "video",
-        layout: "desktop-showcase",
-        videoSrc: "/images/respond-ai/Email.mov",
-        videoLabel: "Email Interface — AI-assisted Carrier Communication",
       },
       {
         type: "images",
@@ -627,22 +646,26 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "text",
-        sectionNumber: "05",
+        sectionNumber: "06",
         sectionLabel: "Templates",
-        heading: "Templates that guide AI responses and ensure quality",
+        heading: "Templates that steer model outputs and ensure quality",
         body: [
-          "In order to guide the responses and ensure quality, I designed a way for users to create templates using variables. These templates inform the mega-prompts and multi-shot prompting that ensures consistent, high-quality responses.",
+          "To guide the AI\u2019s responses, I designed a template system built around variables. Operators create reusable templates with dynamic fields \u2014 shipper, date, route, weather \u2014 that inform the mega-prompts and multi-shot prompting behind each response, ensuring consistency and accuracy.",
         ],
       },
       {
-        type: "video",
+        type: "images",
         layout: "desktop-showcase",
-        videoSrc: "/images/respond-ai/Templates.mov",
-        videoLabel: "Template Builder — Variable-based Response Templates",
+        images: [
+          {
+            label: "Template Builder — Variable-based Response Templates",
+            src: "/images/respond-ai/templates.png",
+          },
+        ],
       },
       {
         type: "text",
-        sectionNumber: "06",
+        sectionNumber: "07",
         sectionLabel: "Testing & Feedback",
         heading: "Overwhelmingly positive response from active customers",
         body: [
