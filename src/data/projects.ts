@@ -1602,7 +1602,7 @@ export const PROJECTS: Project[] = [
         sectionLabel: "Context",
         heading: "Redesigning the backbone of DHS identity services",
         body: [
-          "CIS 2 is the main identity system used by USCIS adjudicators to verify applicant qualifications and check historical encounters. Originally designed in the 1970s, it had become the backbone for DHS identity services that downstream platforms like Palantir ontology rely on — but it was showing its age.",
+          "CIS 2 is the main identity system used by USCIS adjudicators to verify applicant qualifications and check historical encounters. Originally designed in the 1970s, it had become the backbone for DHS identity services that downstream platforms depend on — but it was showing its age.",
           "How might we drive person-centric identity and case-management UX — A-number search, cross-record timelines, audit/lineage, RBAC/ABAC, and error-handling — at a scale of 5,000+ users processing ~35k applications per day?",
         ],
       },
@@ -1727,7 +1727,7 @@ export const PROJECTS: Project[] = [
     outcome: {
       heading: "The backbone of DHS identity services",
       body: [
-        "By consolidating disparate systems into a unified, person-centric platform, adjudicators gained a single source of truth for applicant identity — with cross-record timelines, granular RBAC/ABAC controls, and full audit lineage. CIS 2 now serves as the foundation that downstream platforms like Palantir ontology depend on.",
+        "By consolidating disparate systems into a unified, person-centric platform, adjudicators gained a single source of truth for applicant identity — with cross-record timelines, granular RBAC/ABAC controls, and full audit lineage. CIS 2 now serves as the foundation that downstream platforms depend on.",
       ],
       contributions: [
         "Design Leadership",
