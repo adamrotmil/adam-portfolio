@@ -10,6 +10,12 @@ type Flavor = {
   emoji: string;
 };
 
+type Topping = {
+  name: string;
+  emoji: string;
+  color: string;
+};
+
 type GamePhase = "menu" | "playing" | "result";
 
 type Customer = {
@@ -20,12 +26,14 @@ type Customer = {
   hairColor: string;
   hat: boolean;
   order: Flavor[];
+  toppings: Topping[];
   x: number;
   targetX: number;
   y: number;
   state: "walking-in" | "waiting" | "served" | "walking-out";
   reaction: string;
   patience: number;
+  sitting: boolean;
 };
 
 // ── Constants ──────────────────────────────────────────────────────────────────
@@ -48,6 +56,14 @@ const SKIN_TONES = ["#FFDBB4", "#E8B88A", "#C68642", "#8D5524", "#6B3E26"];
 const SHIRT_COLORS = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD", "#FF8C69", "#87CEEB"];
 const HAIR_COLORS = ["#2C1B0E", "#5C3317", "#8B6914", "#D4A017", "#C04000", "#1A1A2E"];
 
+const TOPPINGS: Topping[] = [
+  { name: "Sprinkles", emoji: "✨", color: "#FF69B4" },
+  { name: "Cherries", emoji: "🍒", color: "#DC143C" },
+  { name: "Whipped Cream", emoji: "☁️", color: "#FFFDD0" },
+  { name: "Hot Fudge", emoji: "🍫", color: "#3D1C02" },
+  { name: "Gummy Bears", emoji: "🐻", color: "#FF6347" },
+];
+
 const REACTIONS = {
   happy: ["Yay!", "Thanks!", "Yummy!", "Perfect!", "Love it!"],
   impatient: ["Hurry!", "Um...", "Hello?", "Waiting..."],
@@ -67,8 +83,107 @@ function generateOrder(level: number): Flavor[] {
   return Array.from({ length: count }, () => pick(FLAVORS));
 }
 
+function generateToppings(level: number): Topping[] {
+  if (level < 2) return [];
+  const chance = Math.min(0.3 + level * 0.1, 0.8);
+  if (Math.random() > chance) return [];
+  const count = Math.min(1 + Math.floor(level / 3), 3);
+  const chosen: Topping[] = [];
+  const available = [...TOPPINGS];
+  for (let i = 0; i < count && available.length > 0; i++) {
+    const idx = Math.floor(Math.random() * available.length);
+    chosen.push(available.splice(idx, 1)[0]);
+  }
+  return chosen;
+}
+
+// ── Sound helpers ─────────────────────────────────────────────────────────────
+function playDing() {
+  try {
+    const ctx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.frequency.setValueAtTime(1200, ctx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(800, ctx.currentTime + 0.15);
+    gain.gain.setValueAtTime(0.3, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.4);
+    osc.type = "sine";
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + 0.4);
+    // Second ding (higher)
+    const osc2 = ctx.createOscillator();
+    const gain2 = ctx.createGain();
+    osc2.connect(gain2);
+    gain2.connect(ctx.destination);
+    osc2.frequency.setValueAtTime(1600, ctx.currentTime + 0.1);
+    osc2.frequency.exponentialRampToValueAtTime(1200, ctx.currentTime + 0.3);
+    gain2.gain.setValueAtTime(0.2, ctx.currentTime + 0.1);
+    gain2.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.5);
+    osc2.type = "sine";
+    osc2.start(ctx.currentTime + 0.1);
+    osc2.stop(ctx.currentTime + 0.5);
+  } catch { /* audio not available */ }
+}
+
+function createMusicContext(): { ctx: AudioContext; stop: () => void } | null {
+  try {
+    const ctx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
+    const masterGain = ctx.createGain();
+    masterGain.gain.setValueAtTime(0.08, ctx.currentTime);
+    masterGain.connect(ctx.destination);
+
+    // Fun looping melody - ice cream truck vibes
+    const notes = [
+      523, 587, 659, 698, 784, 698, 659, 587, // C5 D5 E5 F5 G5 F5 E5 D5
+      523, 659, 784, 880, 784, 659, 523, 440, // C5 E5 G5 A5 G5 E5 C5 A4
+      523, 523, 587, 587, 659, 659, 698, 784, // repeat pattern
+      880, 784, 698, 659, 587, 523, 440, 523, // descending
+    ];
+    const noteDuration = 0.22;
+    const loopLength = notes.length * noteDuration;
+    let stopped = false;
+
+    function scheduleLoop(startTime: number) {
+      if (stopped) return;
+      notes.forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const noteGain = ctx.createGain();
+        osc.connect(noteGain);
+        noteGain.connect(masterGain);
+        osc.type = "triangle";
+        const t = startTime + i * noteDuration;
+        osc.frequency.setValueAtTime(freq, t);
+        noteGain.gain.setValueAtTime(0, t);
+        noteGain.gain.linearRampToValueAtTime(0.5, t + 0.02);
+        noteGain.gain.linearRampToValueAtTime(0.3, t + noteDuration * 0.5);
+        noteGain.gain.linearRampToValueAtTime(0, t + noteDuration * 0.95);
+        osc.start(t);
+        osc.stop(t + noteDuration);
+      });
+      // Schedule next loop
+      setTimeout(() => scheduleLoop(startTime + loopLength), (loopLength - 1) * 1000);
+    }
+
+    scheduleLoop(ctx.currentTime + 0.1);
+
+    return {
+      ctx,
+      stop: () => {
+        stopped = true;
+        masterGain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.5);
+        setTimeout(() => ctx.close(), 600);
+      },
+    };
+  } catch {
+    return null;
+  }
+}
+
 function createCustomer(id: number, level: number): Customer {
   const order = generateOrder(level);
+  const toppings = generateToppings(level);
   return {
     id,
     name: pick(CUSTOMER_NAMES),
@@ -77,12 +192,14 @@ function createCustomer(id: number, level: number): Customer {
     hairColor: pick(HAIR_COLORS),
     hat: Math.random() > 0.7,
     order,
-    x: -60,
+    toppings,
+    x: STORE_WIDTH + 10,
     targetX: 140 + Math.random() * 80,
     y: FLOOR_Y,
     state: "walking-in",
     reaction: "",
     patience: 100,
+    sitting: Math.random() > 0.6,
   };
 }
 
@@ -378,8 +495,12 @@ export default function IceCreamGame() {
   const [missedCustomers, setMissedCustomers] = useState(0);
   const [animatingScoop, setAnimatingScoop] = useState<Flavor | null>(null);
   const [showTutorial, setShowTutorial] = useState(false);
+  const [toppingsDone, setToppingsDone] = useState(0);
+  const [toppingsPhase, setToppingsPhase] = useState(false);
+  const [musicOn, setMusicOn] = useState(false);
   const customerIdRef = useRef(0);
   const walkIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const musicRef = useRef<{ ctx: AudioContext; stop: () => void } | null>(null);
 
   // Load high score
   useEffect(() => {
@@ -394,16 +515,17 @@ export default function IceCreamGame() {
     }
   }, [score, highScore]);
 
-  // Walk customer in
+  // Walk customer in (from the door on the right)
   const walkCustomerIn = useCallback((c: Customer) => {
     setCustomer({ ...c });
+    playDing();
     if (walkIntervalRef.current) clearInterval(walkIntervalRef.current);
 
     walkIntervalRef.current = setInterval(() => {
       setCustomer((prev) => {
         if (!prev || prev.state !== "walking-in") return prev;
-        const newX = prev.x + 3;
-        if (newX >= prev.targetX) {
+        const newX = prev.x - 3;
+        if (newX <= prev.targetX) {
           return { ...prev, x: prev.targetX, state: "waiting" };
         }
         return { ...prev, x: newX };
@@ -411,15 +533,15 @@ export default function IceCreamGame() {
     }, 20);
   }, []);
 
-  // Walk customer out
+  // Walk customer out (back out the door on the right)
   const walkCustomerOut = useCallback(() => {
     if (walkIntervalRef.current) clearInterval(walkIntervalRef.current);
 
     walkIntervalRef.current = setInterval(() => {
       setCustomer((prev) => {
         if (!prev || prev.state !== "walking-out") return prev;
-        const newX = prev.x - 4;
-        if (newX < -60) {
+        const newX = prev.x + 4;
+        if (newX > STORE_WIDTH + 60) {
           clearInterval(walkIntervalRef.current!);
           return null;
         }
@@ -469,6 +591,8 @@ export default function IceCreamGame() {
         setScoopsDone(0);
         setConeScoops([]);
         setAnimatingScoop(null);
+        setToppingsDone(0);
+        setToppingsPhase(false);
         walkCustomerIn(c);
       }, 800);
       return () => clearTimeout(timer);
@@ -487,13 +611,34 @@ export default function IceCreamGame() {
     if (missedCustomers >= 3 && phase === "playing") {
       setPhase("result");
       if (walkIntervalRef.current) clearInterval(walkIntervalRef.current);
+      if (musicRef.current) { musicRef.current.stop(); musicRef.current = null; setMusicOn(false); }
     }
   }, [missedCustomers, phase]);
+
+  // Complete the order (scoops + toppings done)
+  const completeOrder = useCallback(() => {
+    if (!customer) return;
+    const bonus = Math.ceil(customer.patience / 10) * 10;
+    const toppingBonus = customer.toppings.length * 25;
+    setScore((s) => s + 100 + bonus + toppingBonus);
+    setCustomersServed((c) => c + 1);
+    setCustomer((prev) =>
+      prev
+        ? { ...prev, reaction: pick(REACTIONS.happy), state: "served" }
+        : prev
+    );
+    setTimeout(() => {
+      setCustomer((prev) =>
+        prev ? { ...prev, state: "walking-out" } : prev
+      );
+    }, 1200);
+  }, [customer]);
 
   // Tap a flavor
   const tapFlavor = useCallback(
     (flavor: Flavor) => {
       if (!customer || customer.state !== "waiting") return;
+      if (toppingsPhase) return; // toppings use separate buttons
       if (scoopsDone >= customer.order.length) return;
 
       const expectedFlavor = customer.order[scoopsDone];
@@ -510,20 +655,12 @@ export default function IceCreamGame() {
         setScoopsDone(newDone);
 
         if (newDone === customer.order.length) {
-          // Order complete!
-          const bonus = Math.ceil(customer.patience / 10) * 10;
-          setScore((s) => s + 100 + bonus);
-          setCustomersServed((c) => c + 1);
-          setCustomer((prev) =>
-            prev
-              ? { ...prev, reaction: pick(REACTIONS.happy), state: "served" }
-              : prev
-          );
-          setTimeout(() => {
-            setCustomer((prev) =>
-              prev ? { ...prev, state: "walking-out" } : prev
-            );
-          }, 1200);
+          if (customer.toppings.length > 0) {
+            // Move to toppings phase
+            setToppingsPhase(true);
+          } else {
+            completeOrder();
+          }
         }
       } else {
         // Wrong flavor — just shake, no penalty, let them try again
@@ -537,7 +674,34 @@ export default function IceCreamGame() {
         }, 600);
       }
     },
-    [customer, scoopsDone, coneScoops]
+    [customer, scoopsDone, coneScoops, toppingsPhase, completeOrder]
+  );
+
+  // Tap a topping
+  const tapTopping = useCallback(
+    (topping: Topping) => {
+      if (!customer || customer.state !== "waiting" || !toppingsPhase) return;
+      if (toppingsDone >= customer.toppings.length) return;
+
+      const expected = customer.toppings[toppingsDone];
+      if (topping.name === expected.name) {
+        const newDone = toppingsDone + 1;
+        setToppingsDone(newDone);
+        if (newDone === customer.toppings.length) {
+          completeOrder();
+        }
+      } else {
+        setCustomer((prev) =>
+          prev ? { ...prev, reaction: "Wrong topping!" } : prev
+        );
+        setTimeout(() => {
+          setCustomer((prev) =>
+            prev && prev.state === "waiting" ? { ...prev, reaction: "" } : prev
+          );
+        }, 600);
+      }
+    },
+    [customer, toppingsPhase, toppingsDone, completeOrder]
   );
 
   const startGame = useCallback(() => {
@@ -548,14 +712,33 @@ export default function IceCreamGame() {
     setCustomer(null);
     setScoopsDone(0);
     setConeScoops([]);
+    setToppingsDone(0);
+    setToppingsPhase(false);
     customerIdRef.current = 0;
     setPhase("playing");
+    // Start music
+    if (musicRef.current) musicRef.current.stop();
+    musicRef.current = createMusicContext();
+    setMusicOn(true);
+  }, []);
+
+  // Toggle music
+  const toggleMusic = useCallback(() => {
+    if (musicRef.current) {
+      musicRef.current.stop();
+      musicRef.current = null;
+      setMusicOn(false);
+    } else {
+      musicRef.current = createMusicContext();
+      setMusicOn(true);
+    }
   }, []);
 
   // Cleanup on unmount
   useEffect(() => {
     return () => {
       if (walkIntervalRef.current) clearInterval(walkIntervalRef.current);
+      if (musicRef.current) { musicRef.current.stop(); musicRef.current = null; }
     };
   }, []);
 
@@ -661,9 +844,17 @@ export default function IceCreamGame() {
         <div className="bg-white/90 backdrop-blur rounded-lg px-3 py-1 shadow text-xs font-bold text-gray-700">
           Score: {score}
         </div>
-        <div className="bg-white/90 backdrop-blur rounded-lg px-3 py-1 shadow text-xs text-gray-700">
-          {"❤️".repeat(3 - missedCustomers)}
-          {"🖤".repeat(missedCustomers)}
+        <div className="flex items-center gap-2">
+          <button
+            onClick={toggleMusic}
+            className="bg-white/90 backdrop-blur rounded-lg px-2 py-1 shadow text-xs text-gray-700 hover:bg-white transition-colors"
+          >
+            {musicOn ? "🔊" : "🔇"}
+          </button>
+          <div className="bg-white/90 backdrop-blur rounded-lg px-3 py-1 shadow text-xs text-gray-700">
+            {"❤️".repeat(3 - missedCustomers)}
+            {"🖤".repeat(missedCustomers)}
+          </div>
         </div>
       </div>
 
@@ -681,14 +872,22 @@ export default function IceCreamGame() {
             <>
               <PersonSprite
                 x={customer.x}
-                y={customer.y - 10}
+                y={customer.sitting && customer.state === "waiting" ? customer.y - 4 : customer.y - 10}
                 skinTone={customer.skinTone}
                 shirtColor={customer.shirtColor}
                 hairColor={customer.hairColor}
                 hat={customer.hat}
-                facing="right"
+                facing={customer.state === "walking-out" ? "right" : "left"}
                 walking={customer.state === "walking-in" || customer.state === "walking-out"}
               />
+              {/* Stool if sitting */}
+              {customer.sitting && customer.state === "waiting" && (
+                <g>
+                  <rect x={customer.x - 12} y={customer.y + 22} width={24} height={5} rx={2} fill="#B8863C" />
+                  <rect x={customer.x - 8} y={customer.y + 27} width={4} height={12} fill="#8B6914" />
+                  <rect x={customer.x + 4} y={customer.y + 27} width={4} height={12} fill="#8B6914" />
+                </g>
+              )}
 
               {/* Speech bubble with order */}
               {(customer.state === "waiting" || customer.state === "served") && (
@@ -743,39 +942,142 @@ export default function IceCreamGame() {
         </svg>
       </div>
 
+      {/* Large Order Display */}
+      {customer && customer.state === "waiting" && (
+        <div className="w-full max-w-md bg-white/95 backdrop-blur rounded-2xl shadow-lg p-4 mb-3">
+          <div className="text-center mb-2">
+            <span className="text-sm font-bold text-gray-500 uppercase tracking-wider">
+              {customer.name}&apos;s Order
+            </span>
+          </div>
+
+          {/* Scoops display */}
+          <div className="flex flex-wrap justify-center gap-2 mb-2">
+            {customer.order.map((item, i) => {
+              const done = i < scoopsDone;
+              const isNext = !toppingsPhase && i === scoopsDone;
+              return (
+                <div
+                  key={i}
+                  className="flex items-center gap-1 px-3 py-2 rounded-full text-base font-bold transition-all"
+                  style={{
+                    backgroundColor: done ? `${item.color}66` : item.color,
+                    border: isNext ? "3px solid #333" : "2px solid transparent",
+                    opacity: done ? 0.5 : 1,
+                    color: item.name === "Chocolate" || item.name === "Blueberry" ? "white" : "#333",
+                    transform: isNext ? "scale(1.1)" : "scale(1)",
+                  }}
+                >
+                  <span className="text-lg">{item.emoji}</span>
+                  <span>{item.name}</span>
+                  {done && <span className="text-green-600 ml-1">✓</span>}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Toppings display */}
+          {customer.toppings.length > 0 && (
+            <>
+              <div className="text-center text-xs text-gray-400 mb-1">+ Toppings</div>
+              <div className="flex flex-wrap justify-center gap-2">
+                {customer.toppings.map((t, i) => {
+                  const done = i < toppingsDone;
+                  const isNext = toppingsPhase && i === toppingsDone;
+                  return (
+                    <div
+                      key={i}
+                      className="flex items-center gap-1 px-3 py-2 rounded-full text-base font-bold transition-all"
+                      style={{
+                        backgroundColor: done ? "#e0e0e0" : `${t.color}33`,
+                        border: isNext ? "3px solid #333" : "2px solid #ddd",
+                        opacity: done ? 0.5 : 1,
+                        transform: isNext ? "scale(1.1)" : "scale(1)",
+                      }}
+                    >
+                      <span className="text-lg">{t.emoji}</span>
+                      <span>{t.name}</span>
+                      {done && <span className="text-green-600 ml-1">✓</span>}
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
+
+          {/* Current instruction */}
+          <div className="text-center mt-3">
+            {!toppingsPhase && scoopsDone < customer.order.length ? (
+              <p className="text-lg font-bold text-gray-700">
+                👇 Tap <span style={{ color: customer.order[scoopsDone]?.highlight }}>{customer.order[scoopsDone]?.emoji} {customer.order[scoopsDone]?.name}</span>
+                <span className="text-gray-400 text-sm ml-2">({scoopsDone + 1}/{customer.order.length})</span>
+              </p>
+            ) : toppingsPhase && toppingsDone < customer.toppings.length ? (
+              <p className="text-lg font-bold text-gray-700">
+                👇 Add <span>{customer.toppings[toppingsDone]?.emoji} {customer.toppings[toppingsDone]?.name}</span>
+                <span className="text-gray-400 text-sm ml-2">({toppingsDone + 1}/{customer.toppings.length})</span>
+              </p>
+            ) : null}
+          </div>
+        </div>
+      )}
+
       {/* Flavor buttons */}
       <div className="w-full max-w-md">
-        <div className="grid grid-cols-3 gap-2">
-          {FLAVORS.map((f) => {
-            const isNext =
-              customer?.state === "waiting" &&
-              scoopsDone < (customer?.order.length || 0) &&
-              customer?.order[scoopsDone]?.name === f.name;
-            return (
-              <button
-                key={f.name}
-                onClick={() => tapFlavor(f)}
-                className="py-3 px-2 rounded-xl text-sm font-semibold transition-all active:scale-95 border-2 shadow-sm"
-                style={{
-                  backgroundColor: f.color,
-                  borderColor: isNext ? "#333" : f.highlight,
-                  color:
-                    f.name === "Chocolate" || f.name === "Blueberry"
-                      ? "white"
-                      : "#444",
-                  boxShadow: isNext ? "0 0 12px rgba(0,0,0,0.2)" : undefined,
-                }}
-              >
-                {f.emoji} {f.name}
-              </button>
-            );
-          })}
-        </div>
-
-        {customer?.state === "waiting" && scoopsDone < customer.order.length && (
-          <p className="text-center text-xs text-gray-400 mt-2">
-            Scoop {scoopsDone + 1} of {customer.order.length} · Tap <strong>{customer.order[scoopsDone]?.name}</strong>
-          </p>
+        {!toppingsPhase ? (
+          <div className="grid grid-cols-3 gap-2">
+            {FLAVORS.map((f) => {
+              const isNext =
+                customer?.state === "waiting" &&
+                !toppingsPhase &&
+                scoopsDone < (customer?.order.length || 0) &&
+                customer?.order[scoopsDone]?.name === f.name;
+              return (
+                <button
+                  key={f.name}
+                  onClick={() => tapFlavor(f)}
+                  className="py-3 px-2 rounded-xl text-sm font-semibold transition-all active:scale-95 border-2 shadow-sm"
+                  style={{
+                    backgroundColor: f.color,
+                    borderColor: isNext ? "#333" : f.highlight,
+                    color:
+                      f.name === "Chocolate" || f.name === "Blueberry"
+                        ? "white"
+                        : "#444",
+                    boxShadow: isNext ? "0 0 12px rgba(0,0,0,0.2)" : undefined,
+                  }}
+                >
+                  {f.emoji} {f.name}
+                </button>
+              );
+            })}
+          </div>
+        ) : (
+          /* Topping buttons */
+          <div className="grid grid-cols-2 gap-2">
+            {TOPPINGS.map((t) => {
+              const isNext =
+                customer?.state === "waiting" &&
+                toppingsPhase &&
+                toppingsDone < (customer?.toppings.length || 0) &&
+                customer?.toppings[toppingsDone]?.name === t.name;
+              return (
+                <button
+                  key={t.name}
+                  onClick={() => tapTopping(t)}
+                  className="py-3 px-3 rounded-xl text-sm font-semibold transition-all active:scale-95 border-2 shadow-sm"
+                  style={{
+                    backgroundColor: `${t.color}22`,
+                    borderColor: isNext ? "#333" : "#ddd",
+                    color: "#444",
+                    boxShadow: isNext ? "0 0 12px rgba(0,0,0,0.2)" : undefined,
+                  }}
+                >
+                  {t.emoji} {t.name}
+                </button>
+              );
+            })}
+          </div>
         )}
       </div>
     </div>
