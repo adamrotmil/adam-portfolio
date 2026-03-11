@@ -335,7 +335,9 @@ function RenderSection({ section }: { section: ProjectSection }) {
                   loop
                   muted
                   playsInline
+                  preload="metadata"
                   className="h-auto block max-h-[80vh] rounded-[12px]"
+                  style={{ minHeight: "200px" }}
                 />
               </Reveal>
             </div>
@@ -367,6 +369,7 @@ function RenderSection({ section }: { section: ProjectSection }) {
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                     className="w-full h-auto block"
                   />
                 </div>
@@ -377,7 +380,7 @@ function RenderSection({ section }: { section: ProjectSection }) {
       }
       return (
         <section className="bg-[#1a1a1c]">
-          <div className="max-w-[1200px] mx-auto">
+          <div className="max-w-[1200px] mx-auto" style={{ aspectRatio: "16/9" }}>
             <Reveal>
               <video
                 src={assetPath(section.videoSrc || "")}
@@ -385,6 +388,7 @@ function RenderSection({ section }: { section: ProjectSection }) {
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="w-full h-auto block"
               />
             </Reveal>
