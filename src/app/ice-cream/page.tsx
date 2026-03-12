@@ -115,17 +115,25 @@ function createCustomer(id: number, level: number): Customer {
 // Mobile browsers require AudioContext to be created/resumed during a user gesture.
 // We create ONE shared context on first interaction and reuse it for all sounds.
 let sharedAudioCtx: AudioContext | null = null;
+let audioReady = false;
 
 function getAudioCtx(): AudioContext | null {
+  if (!audioReady) return null;
+  return sharedAudioCtx;
+}
+
+// Must be called from a user gesture handler (click/tap). Awaits resume() so
+// subsequent getAudioCtx() calls return a fully-running context.
+async function initAudio(): Promise<void> {
   try {
     if (!sharedAudioCtx || sharedAudioCtx.state === "closed") {
       sharedAudioCtx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
     }
     if (sharedAudioCtx.state === "suspended") {
-      sharedAudioCtx.resume();
+      await sharedAudioCtx.resume();
     }
-    return sharedAudioCtx;
-  } catch { return null; }
+    audioReady = true;
+  } catch { /* browser blocked audio */ }
 }
 
 function playDing() {
@@ -981,9 +989,9 @@ export default function IceCreamGame() {
     [customer, toppingsPhase, toppingsDone, completeOrder]
   );
 
-  const startGame = useCallback(() => {
+  const startGame = useCallback(async () => {
     // Initialize shared audio context on user gesture (critical for mobile)
-    getAudioCtx();
+    await initAudio();
     setLevel(1); setScore(0); setCustomersServed(0); setCustomer(null);
     setScoopsDone(0); setConeScoops([]); setToppingsDone(0); setToppingsPhase(false);
     setGoldCoins([]); setTotalGold(0);
